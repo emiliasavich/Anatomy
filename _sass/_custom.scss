@@ -16,7 +16,3 @@ details summary::after {
 details[open] summary::after {
   transform: rotate(45deg); /* rotates the + */
 }
-
-.nav__grandchild {
-  color: pink;
-}
