@@ -25,7 +25,8 @@ email: emiliasavich@gmail.com
 name: "Emilia Savich"
 description: >- # this means to ignore newlines until "baseurl:"
   Anatomy study sheets created in conjunction with CommuniQuest YouTube videos.
-url: "https://emiliasavich.github.io/Anatomy" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://emiliasavich.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "Anatomy/"
 repository: "emiliasavich/Anatomy"
 # twitter_username: jekyllrb
 # github_username:  jekyll
