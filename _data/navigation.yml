@@ -8,32 +8,36 @@ main:
 # documentation links
 pages:
   - title: Getting Started
+    url: /getting_started/
     children:
       - title: "Effective Learning Methods"
-        url: /pages/effective_learning_methods/
+        url: /getting_started/effective_learning_methods/
         children:
           - title: "Learning Bones"
-            url: /pages/effective_learning_methods/bones/
+            url: /getting_started/effective_learning_methods/bones/
   - title: Upper Limb
+    url: /upper_limb/
     children:
       - title: "Bones"
-        url: /pages/upper_limb/bones/
+        url: /upper_limb/bones/
         children:
           - title: "Humerus"
-            url: /pages/upper_limb/bones/humerus/
+            url: /upper_limb/bones/humerus/
   - title: Lower Limb
+    url: /lower_limb/
     children:
       - title: "Bones"
-        url: /pages/lower_limb/bones/
+        url: /lower_limb/bones/
         children:
           - title: "Femur"
-            url: /pages/lower_limb/bones/femur/
+            url: /lower_limb/bones/femur/
   - title: Entire Body
+    url: /entire_body/
     children:
       - title: "Bones"
-        url: /pages/all_pages/bones/
+        url: /entire_body/bones/
         children:
           - title: "Humerus"
-            url: /pages/upper_limb/bones/humerus/
+            url: /upper_limb/bones/humerus/
           - title: "Femur"
-            url: /pages/lower_limb/bones/femur/
+            url: /lower_limb/bones/femur/

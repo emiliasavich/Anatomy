@@ -44,6 +44,10 @@ minimal_mistakes_skin: "dirt"
 plugins:
   - jekyll-feed
 
+# Pages
+collections:
+  pages:
+    output: true
 
 # Footer
 footer:

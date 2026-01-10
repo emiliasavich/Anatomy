@@ -1,10 +1,7 @@
 ---
-#layout: page
 layout: single
 title: About
 permalink: /about/
-sidebar:
-  - nav: "pages"
 ---
 
 Test
