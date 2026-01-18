@@ -3,26 +3,26 @@ Sidebar
 ********************************/
 details summary {
   cursor: pointer;
-  list-style: none; /* remove default triangle in some browsers */
+  list-style: none; /* remove default triangle */
+  position: relative; /* needed for absolute positioning */
+  padding-right: 1.5em; /* space for the plus sign */
 }
 
 /* Base style for the toggle */
 details summary::after {
   content: "＋";
-  margin-right: 0.5em;
-  float: right;
-  transition: transform 0.3s ease; /* smooth rotation */
-  // display: inline-block;  /* needed for transform */
+  position: absolute;
+  right: 0;          /* stick to the right edge */
+  top: 50%;
+  transform: translateY(-50%); /* vertically center */
+  transition: transform 0.3s ease;
+  display: inline-block; /* needed for rotation */
 }
 
 /* Rotate the + when the details is open */
 details[open] summary::after {
-  transform: rotate(45deg); /* rotates the + */
+  transform: translateY(-50%) rotate(45deg); /* rotates the + */
 }
-
-// .nav__grandchild {
-//   color:red !important;
-// }
 
 
 /*************************************
