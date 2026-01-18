@@ -150,3 +150,12 @@ a:hover {
   align-items: center;
   margin-top: 40px;
 }
+
+/***********************
+Masthead
+************************/
+.masthead a::after,
+.masthead a::before {
+  content: none !important;
+  display: none !important;
+}
