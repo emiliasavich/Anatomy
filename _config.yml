@@ -49,6 +49,9 @@ collections:
   pages:
     output: true
 
+# Breadcrumbs
+breadcrumbs: true
+
 # Footer
 footer:
   links:

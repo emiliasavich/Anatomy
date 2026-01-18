@@ -2,6 +2,7 @@
 layout: directory
 title: Lower Limb
 slug: lower_limb
-description: description placeholder
+directory_children_order:
+- lower_limb_bones
 permalink: /lower_limb/
 ---

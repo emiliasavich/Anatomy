@@ -1,3 +1,6 @@
+/********************************
+Sidebar
+********************************/
 details summary {
   cursor: pointer;
   list-style: none; /* remove default triangle in some browsers */
@@ -9,13 +12,17 @@ details summary::after {
   margin-right: 0.5em;
   float: right;
   transition: transform 0.3s ease; /* smooth rotation */
-  display: inline-block;  /* needed for transform */
+  // display: inline-block;  /* needed for transform */
 }
 
 /* Rotate the + when the details is open */
 details[open] summary::after {
   transform: rotate(45deg); /* rotates the + */
 }
+
+// .nav__grandchild {
+//   color:red !important;
+// }
 
 
 /*************************************
@@ -29,39 +36,62 @@ For Directory Pages
   justify-content: center;
 }
 
-.directory-box {
-  display: block;
-  width: 200px;
-  height: 200px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  text-decoration: none;
-  color: inherit !important;
-  transition: transform 0.2s, box-shadow 0.2s;
+  .directory-box {
+    display: flex;                 /* changed */
+    align-items: center;           /* vertical center */
+    justify-content: center;       /* horizontal center */
+    width: 200px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit !important;
+    transition: transform 0.2s, box-shadow 0.2s;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    background-color: #ffb563;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      background-color: #ffb563;
+      color: #2b2b2b !important;
+    }
   }
-}
 
 
 .directory-box h2 {
-  margin-top: 0;
+  margin: 0;                     /* remove top spacing */
   font-size: 1.2rem;
+  border-bottom: none !important;
+}
+
+.directory-box h2::after {
+  display: none !important;
 }
 
 .directory-box p {
   font-size: 0.9rem;
 }
 
+/**********************
+Removes underline on directory boxes
+**********************/
+.directory-box,
+.directory-box:hover,
+.directory-box:focus,
+.directory-box:visited {
+  text-decoration: none !important;
+}
+
+.directory-box h2,
+.directory-box h2:hover {
+  text-decoration: none !important;
+}
+
 
 /**************************
-
+Page no right
 *************************/
 .page-no-right {
   @include breakpoint($large) {
@@ -90,4 +120,33 @@ For Directory Pages
       clear: both;
     }
   }
+}
+
+/*************************
+Default link
+*************************/
+a {
+  color: #6f777d !important;          /* dark charcoal */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #53595e !important;          /* deep navy on hover */
+  text-decoration: none !important;
+}
+
+/*************************
+404 Go Back Button
+*************************/
+.go_back {
+  @extend .directory-box;  // inherit everything
+  width: 150px;
+  height: 50px;
+}
+
+.go_back_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }

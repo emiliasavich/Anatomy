@@ -3,17 +3,17 @@
  {% if child.children %}
     <details class="nav__children"{% if child.children | map: "url" | join: "," contains page.url %} closed{% endif %}>
       <summary>
-  	{% include render_title.html title=child %}
-</summary>
+        {% include render_title.html title=child %}
+      </summary>
       <ul>
         {% for c in child.children %}
-	<li class="nav__grandchild">
-		{% include render_title.html title=c %}
-	</li>
+          <li class="nav__grandchild">
+            {% include render_title.html title=c %}
+          </li>
         {% endfor %}
       </ul>
     </details>
-  {% else %}
-  	{% include render_title.html title=child %}
-  {% endif %}
+{% else %}
+  {% include render_title.html title=child %}
+{% endif %}
 </li>

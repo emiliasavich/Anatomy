@@ -1,0 +1,24 @@
+lower_limb_femur:
+  path: /lower_limb/bones/femur/
+  breadcrumb:
+    - slug: lower_limb
+      title: Lower Limb
+      url: /lower_limb/
+    - slug: bones
+      title: Bones
+      url: /lower_limb/bones/
+    - slug: femur
+      title: Femur
+      url: /lower_limb/bones/femur/
+entire_body_femur:
+  path: /entire_body/bones/femur/
+  breadcrumb:
+    - slug: entire_body
+      title: Entire Body
+      url: /entire_body/
+    - slug: bones
+      title: Bones
+      url: /entire_body/bones/
+    - slug: femur
+      title: Femur
+      url: /entire_body/bones/femur/

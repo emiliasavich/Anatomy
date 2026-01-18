@@ -1,2 +1,5 @@
 CHANGE CSS
 update _sass/custom.scss
+
+Start server locally
+bundle exec jekyll serve

@@ -2,6 +2,7 @@
 layout: directory
 title: Upper Limb
 slug: upper_limb
-description: description placeholder
+directory_children_order:
+- upper_limb_bones
 permalink: /upper_limb/
 ---

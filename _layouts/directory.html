@@ -10,10 +10,14 @@ layout: single-no-right
       {% if p.image %}
         <img src="{{ p.image }}" alt="{{ p.title }}" class="directory-image">
       {% endif %}
-      <h2>{{ p.title }}</h2>
-      {% if p.description %}
-        <p>{{ p.description }}</p>
+      {% if p.directory_title %}
+        <h2>{{ p.directory_title }}</h2>
+      {% else %}
+        <h2>{{ p.title }}</h2>
       {% endif %}
+      <!-- {% if p.description %}
+        <p>{{ p.description }}</p>
+      {% endif %} -->
     </a>
   {% endif %}
 {% endfor %}

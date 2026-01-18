@@ -14,7 +14,7 @@ pages:
         url: /getting_started/effective_learning_methods/
         children:
           - title: "Learning Bones"
-            url: /getting_started/effective_learning_methods/bones/
+            url: /getting_started/effective_learning_methods/learning_bones.html
   - title: Upper Limb
     url: /upper_limb/
     children:
@@ -22,7 +22,7 @@ pages:
         url: /upper_limb/bones/
         children:
           - title: "Humerus"
-            url: /upper_limb/bones/humerus/
+            url: /upper_limb/bones/humerus.html
   - title: Lower Limb
     url: /lower_limb/
     children:
@@ -30,7 +30,7 @@ pages:
         url: /lower_limb/bones/
         children:
           - title: "Femur"
-            url: /lower_limb/bones/femur/
+            url: /lower_limb/bones/femur.html
   - title: Entire Body
     url: /entire_body/
     children:
@@ -38,6 +38,6 @@ pages:
         url: /entire_body/bones/
         children:
           - title: "Humerus"
-            url: /upper_limb/bones/humerus/
+            url: /entire_body/bones/humerus.html
           - title: "Femur"
-            url: /lower_limb/bones/femur/
+            url: /entire_body/bones/femur.html
