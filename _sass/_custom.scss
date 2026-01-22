@@ -6,14 +6,261 @@ So that text isn't so big
 }
 
 /*******************************
-Page styles
+Page Styles
 *******************************/
-.step {
-  margin-bottom: 2em;
-}
 .mnemonic {
   font-style: italic;
   font-weight: bold;
+}
+
+figcaption {
+  font-family: inherit;
+}
+
+/*******************************
+Bone Five Steps Overview
+*******************************/
+/* Base step styling */
+.step {
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  border-left: 6px solid transparent;
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+/* Headings stay consistent */
+.step h2 {
+  margin-top: 0;
+}
+
+/* Step-specific semantic colors */
+.step-location {
+  border-left-color: #3b82f6;          /* blue */
+  background-color: #eff6ff;
+}
+
+.step-shape {
+  border-left-color: #16a34a;          /* green */
+  background-color: #ecfdf5;
+}
+
+.step-neighbors {
+  border-left-color: #7c3aed;          /* purple */
+  background-color: #f5f3ff;
+}
+
+.step-landmarks {
+  border-left-color: #ea580c;          /* orange */
+  background-color: #fff7ed;
+}
+
+.step-blood {
+  border-left-color: #dc2626;          /* red */
+  background-color: #fef2f2;
+}
+
+/* Optional: tighten lists */
+.step ul {
+  margin-top: 0.5rem;
+}
+
+.shape-list {
+  list-style: none;       /* remove bullets */
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.shape-list li {
+  background-color: #fafffc;  /* subtle card background */
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  // font-size: 0.75rem;
+}
+
+.shape-list figure {
+  margin: 0.5rem 0 0 0;
+}
+
+.shape-list figure {
+  display: flex;            /* make figure a flex container */
+  flex-direction: column;   /* stack image above caption */
+  align-items: center;      /* center both image and caption horizontally */
+  margin-top: 0.5rem;         /* spacing above and below */
+}
+
+.shape-list figure img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.2rem;
+}
+
+.shape-list figcaption {
+  font-size: 0.65rem;
+  color: #555;
+  // margin-top: 0.25rem;
+  // text-align: center;       /* ensures text is centered under image */
+}
+
+/*******************************
+Neighbors for 
+********************************/
+/* Step Neighbors Section */
+.step-neighbors {
+  padding: 2rem;
+  background-color: #f9f9f9; /* light neutral background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.neighbors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.neighbor-item {
+  margin-bottom: 3rem;
+}
+
+.neighbor-item h3 {
+  // font-size: 1 .5rem;
+  margin-bottom: 0.5rem;
+  // color: #34495e;
+}
+
+.neighbor-item p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  // color: #555;
+}
+
+.neighbor-subtitle {
+  color: gray;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.image-gallery figure {
+  display: flex;            /* make figure a flex container */
+  flex-direction: column;   /* stack image above caption */
+  align-items: center;      /* center both image and caption horizontally */
+  margin-top: 0.5rem;         /* spacing above and below */
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 4px;
+  display: block;
+  margin: 0.4rem 0.4rem;
+  overflow: hidden; /* hide the parts that go outside */
+  // text-align: center;
+}
+
+.image-gallery img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // border-radius: 4px;
+  // display: block;
+  // margin: 0.5rem 0;
+  object-fit: cover;
+  scale: 1.2;
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+.image-gallery img:hover {
+  // transform: scale(1.5); /* zooms in 1.5x */
+}
+
+.image-gallery figcaption {
+  font-size: 0.65rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.img-hover {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    // transition: opacity 0.2s ease;
+}
+
+.image-container:hover .img-hover {
+    opacity: 1;
+}
+
+.image-container:hover .img-default {
+    opacity: 0;
+}
+
+.image-container .alt-text {
+    display: none; /* hidden by default */
+    width: 100%;
+    height: 100%;
+    padding: 10px;           /* give some spacing inside the box */
+    box-sizing: border-box;  /* include padding in width/height */
+    text-align: center;      /* center horizontally */
+    font-size: 0.8rem;       /* smaller text */
+    // color: #555;
+    // background-color: #f0f0f0; /* optional visible background */
+    // overflow-wrap: break-word; /* wrap long words */
+    // word-wrap: break-word;     /* legacy support */
+    // word-break: break-word;    /* break long words if needed */
+    // display: flex;             /* flex to center vertically */
+    // justify-content: center;   /* horizontal centering */
+    // align-items: center;       /* vertical centering */
+    // text-align: center;        /* center text inside flex container */
+}
+
+// /* Force 1, 2, or 4 images per row */
+// @media (min-width: 500px) {
+//     .image-gallery {
+//         grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+//     }
+// }
+
+// @media (min-width: 2000px) {
+//     .image-gallery {
+//         grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+//     }
+// }
+
+// /* Responsive Adjustments */
+// @media (max-width: 600px) {
+//   .step-neighbors {
+//     padding: 1rem;
+//   }
+
+//   .neighbor-item h3 {
+//     font-size: 1.3rem;
+//   }
+
+//   .image-gallery {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+.toggle-container {
+  cursor: pointer;
 }
 
 /********************************
