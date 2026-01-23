@@ -179,17 +179,14 @@ Neighbors for
   position: absolute;
   width: 100%;
   height: 100%;
-  // border-radius: 4px;
-  // display: block;
-  // margin: 0.5rem 0;
   object-fit: cover;
   scale: 1.2;
   transition: transform 0.3s ease; /* smooth animation */
 }
 
-.image-gallery img:hover {
-  // transform: scale(1.5); /* zooms in 1.5x */
-}
+// .image-gallery img:hover {
+//   // transform: scale(1.5); /* zooms in 1.5x */
+// }
 
 .image-gallery figcaption {
   font-size: 0.65rem;
@@ -220,61 +217,145 @@ Neighbors for
     box-sizing: border-box;  /* include padding in width/height */
     text-align: center;      /* center horizontally */
     font-size: 0.8rem;       /* smaller text */
-    // color: #555;
-    // background-color: #f0f0f0; /* optional visible background */
-    // overflow-wrap: break-word; /* wrap long words */
-    // word-wrap: break-word;     /* legacy support */
-    // word-break: break-word;    /* break long words if needed */
-    // display: flex;             /* flex to center vertically */
-    // justify-content: center;   /* horizontal centering */
-    // align-items: center;       /* vertical centering */
-    // text-align: center;        /* center text inside flex container */
 }
-
-// /* Force 1, 2, or 4 images per row */
-// @media (min-width: 500px) {
-//     .image-gallery {
-//         grid-template-columns: repeat(2, 1fr); /* 2 images per row */
-//     }
-// }
-
-// @media (min-width: 2000px) {
-//     .image-gallery {
-//         grid-template-columns: repeat(4, 1fr); /* 4 images per row */
-//     }
-// }
-
-// /* Responsive Adjustments */
-// @media (max-width: 600px) {
-//   .step-neighbors {
-//     padding: 1rem;
-//   }
-
-//   .neighbor-item h3 {
-//     font-size: 1.3rem;
-//   }
-
-//   .image-gallery {
-//     grid-template-columns: 1fr;
-//   }
-// }
 
 .toggle-container {
   cursor: pointer;
 }
 
+/*********************************
+Anatomical Landmarks
+*********************************/
+.landmarks-item {
+  color: gray;
+  text-align: center;
+}
+
+.landmark-box {
+  // border: 1px solid ;
+  border-radius: 8px;
+  padding: 15px;
+  width: 350px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  // box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  gap: 5px;
+}
+
+.landmark-content ul {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+
+.landmark-image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  // scale: 1.2;
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+
+.landmark-image-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.landmark-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.landmark-image-container:hover .img-hover {
+    opacity: 1;
+}
+
+.landmark-image-container:hover .img-default {
+    opacity: 0;
+}
+
+.landmark-image-container .alt-text {
+  display: none; /* hidden by default */
+  width: 100%;
+  height: 100%;
+  padding: 10px;           /* give some spacing inside the box */
+  box-sizing: border-box;  /* include padding in width/height */
+  text-align: center;      /* center horizontally */
+  font-size: 0.8rem;       /* smaller text */
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .landmark-box {
+    width: 320px;
+  }
+
+  .landmark-image-container {
+    width: 260px;
+    height: 260px;
+    margin-top: 3px;
+  }
+
+  .landmark-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .view-buttons {
+  width: 260px; /* same as landmark-image-container */
+}
+}
+
+/* View buttons */
+.view-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px !important;
+  margin: 0 auto;
+  width: 280px; /* same as landmark-image-container */
+}
+
+.view-btn {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.view-btn.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
 /********************************
-Sidebar
+Navigation
 ********************************/
-details summary {
+%nav_plus {
   cursor: pointer;
   list-style: none; /* remove default triangle */
   position: relative; /* needed for absolute positioning */
   padding-right: 1.5em; /* space for the plus sign */
 }
 
-/* Base style for the toggle */
-details summary::after {
+%nav_plus_after {
   content: "＋";
   position: absolute;
   right: 0;          /* stick to the right edge */
@@ -284,9 +365,46 @@ details summary::after {
   display: inline-block; /* needed for rotation */
 }
 
-/* Rotate the + when the details is open */
-details[open] summary::after {
+%nav_plus_after_open {
   transform: translateY(-50%) rotate(45deg); /* rotates the + */
+}
+
+.nav__children_plus {
+  @extend %nav_plus;
+}
+
+/* Base style for the toggle */
+.nav__children_plus::after {
+  @extend %nav_plus_after;
+}
+
+/* Rotate the + when the details is open */
+details[open] > .nav__children_plus::after {
+  @extend %nav_plus_after_open;
+}
+
+details.nav__children[open] {
+  margin-bottom: 5px;
+}
+
+.nav__grandchild {
+  text-indent: 2em;
+  font-size: 1em !important;
+}
+
+.nav__grandchildren_plus {
+  @extend %nav_plus;
+}
+
+.nav__grandchildren_plus::after {
+  @extend %nav_plus_after;
+  // font-size: 0.5rem;
+}
+
+/* Rotate the + when the details is open */
+details[open] > .nav__grandchildren_plus::after {
+  @extend %nav_plus_after_open;
+  // font-size: 0.5rem;
 }
 
 
@@ -299,6 +417,7 @@ For Directory Pages
   flex-wrap: wrap;
   gap: 1rem;  // space between boxes
   justify-content: center;
+  margin-top: 10px;
 }
 
   .directory-box {
@@ -387,6 +506,72 @@ Page no right
   }
 }
 
+/************************
+Term Popups
+*************************/
+.popup-term {
+  cursor: help;
+  // color: #0056b3;
+  border-bottom: 1px dashed #ffb563;
+}
+
+/* Pop-ups hidden by default */
+.popup-content {
+  // display: none;
+  max-width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  font-size: 0.8rem;
+  padding-top: 0;
+}
+
+/* Active state */
+.popup-content.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .popup-content {
+    max-width: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 12px 12px 0 0;
+    transform: translateY(100%);
+    position: fixed;
+  }
+  .popup-content.active {
+    transform: translateY(0);
+  }
+}
+
+.popup-overlay {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0,0,0,0.5); /* gray overlay */
+
+}
+
+.popup-overlay.active {
+  display: block;
+}
+
 /*************************
 Default link
 *************************/
@@ -398,6 +583,10 @@ a {
 a:hover {
   color: #53595e !important;          /* deep navy on hover */
   text-decoration: none !important;
+}
+
+.link-placeholder {
+  @extend a;
 }
 
 /*************************
@@ -414,6 +603,22 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+}
+
+/*************************
+Work in Progress Button
+*************************/
+.wip_toggle {
+  @extend .directory-box;  // inherit everything
+  width: 180px;
+  height: 50px;
+}
+
+.wip_wrapper {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 40px 0;
 }
 
 /***********************

@@ -1,0 +1,19 @@
+<li>
+  {% assign grandchild = include.grandchild %}
+ {% if grandchild.children %}
+    <details class="nav__grandchildren"{% if grandchild.children | map: "url" | join: "," contains page.url %} closed{% endif %}>
+      <summary class="nav__grandchildren_plus">
+        {% include render_title.html title=grandchild %}
+      </summary>
+      <ul>
+        {% for gc in grandchild.children %}
+          <li class="nav__grandchild">
+            {% include render_title.html title=gc %}
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+{% else %}
+  {% include render_title.html title=grandchild %}
+{% endif %}
+</li>

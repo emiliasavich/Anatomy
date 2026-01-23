@@ -2,13 +2,13 @@
   {% assign child = include.child %}
  {% if child.children %}
     <details class="nav__children"{% if child.children | map: "url" | join: "," contains page.url %} closed{% endif %}>
-      <summary>
+      <summary class="nav__children_plus">
         {% include render_title.html title=child %}
       </summary>
       <ul>
         {% for c in child.children %}
-          <li class="nav__grandchild">
-            {% include render_title.html title=c %}
+          <li>
+            {% include nav_grandchildren.html grandchild=c %}
           </li>
         {% endfor %}
       </ul>

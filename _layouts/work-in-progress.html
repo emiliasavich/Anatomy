@@ -1,0 +1,16 @@
+---
+layout: single-no-right
+---
+
+<script src="{{ '/assets/js/wip-toggle.js' | relative_url }}"></script>
+<div class="wip_banner">
+  <p><strong>This page is being worked on.</strong></p>
+  <p>Content may be incomplete, improperly formatted, or inaccurate.</p>
+  <div class="wip_wrapper">
+    <button class="wip_toggle" onclick="toggleWIP()">Show content</button>
+  </div>
+</div>
+
+<div id="wip_content" class="wip_content hidden">
+  {{ content }}
+</div>

@@ -1,0 +1,52 @@
+- name: Scapula
+  subtitle: Glenohumeral Joint
+  description: "The humerus's head articulates with the <span class=\"popup-term\" data-popup-id=\"scapula\">scapula</span>'s glenoid fossa, forming the <em>glenohumeral joint</em>. This synovial ball-and-socket joint allows <span class=\"popup-term\" data-popup-id=\"circumduction\">circumduction</span> and <span class=\"popup-term\" data-popup-id=\"rotation\">rotation</span>. The humeral head is rounded like a ball, while the glenoid fossa is concave like a cup."
+  images:
+    - src: "scapula - anterior.png"
+      alt: "Glenohumeral Joint Anterior View"
+      subtitle: "Anterior View"
+    - src: "scapula - medial.png"
+      alt: "Glenohumeral Joint Medial View"
+      subtitle: "Medial View"
+    - src: "scapula - posterior.png"
+      alt: "Glenohumeral Joint Posterior View"
+      subtitle: "Posterior View"
+    - src: "scapula - lateral.png"
+      alt: "Glenohumeral Joint Lateral View"
+      subtitle: "Lateral View"
+    - src: "scapula - superior.png"
+      alt: "Glenohumeral Joint Superior View"
+      subtitle: "Superior View"
+
+- name: Radius
+  subtitle: Humeroradial Joint - Part of Elbow Joint
+  description: "The humerus's capitulum articulates with the radius's head, forming a pivot joint that allows hinging and rotation. The radius head is disk-shaped, while the humeral capitulum is rounded."
+  images:
+    - src: "radius - anterior.png"
+      alt: "Humeroradial Joint Anterior View"
+      subtitle: "Anterior View"
+    - src: "radius - medial.png"
+      alt: "Humeroradial Joint Medial View"
+    - src: "radius - posterior.png"
+      alt: "Humeroradial Joint Posterior View"
+      subtitle: "Posterior View"
+    - src: "radius - lateral.png"
+      alt: "Humeroradial Joint Lateral View"
+      subtitle: "Lateral View"
+
+- name: Ulna
+  subtitle: Humeroulnar Joint - Part of Elbow Joint
+  description: "The humerus's trochlea articulates with the ulna's trochlear notch, forming a hinge joint that allows flexion and extension of the forearm. The ulna’s notch is C-shaped and wraps around the humeral trochlea."
+  images:
+    - src: "ulna - anterior.png"
+      alt: "Humeroulnar Joint Anterior View"
+      subtitle: "Anterior View"
+    - src: "ulna - medial.png"
+      alt: "Humeroulnar Joint Medial View"
+      subtitle: "Medial View"
+    - src: "ulna - posterior.png"
+      alt: "Humeroulnar Joint Posterior View"
+      subtitle: "Posterior View"
+    - src: "ulna - lateral.png"
+      alt: "Humeroulnar Joint Lateral View"
+      subtitle: "Lateral View"

@@ -1,0 +1,250 @@
+abduction: 
+  text: |
+    <h1>UNFINISHED - abduction</h1>
+  url: 
+
+adduction: 
+  text: |
+    <h1>UNFINISHED - adduction</h1>
+  url: 
+
+anterior: 
+  text: |
+    <h1>UNFINISHED - anterior</h1>
+  url: 
+
+anterior_circumflex_humeral_artery: 
+  text: |
+    <h1>UNFINISHED - anterior_circumflex_humeral_artery</h1>
+    <div>
+    <ul>
+        <li>Supplies <span class='popup-term' data-popup-id='deltoid'>deltoid</span>, <span class='popup-term' data-popup-id='teres_minor'>teres minor</span>, <span class='popup-term' data-popup-id='teres_major'>teres major</span>, <span class='popup-term' data-popup-id='coracobrachialis'>coracobrachialis</span>, shoulder joint, head of humerus
+        </li>
+    </ul>
+    </div>
+  url: 
+
+axillary_nerve: 
+  text: |
+    <h1>UNFINISHED - axillary_nerve</h1>
+    <div>
+    <ul>
+        <li>Sends motor signals to <span class='popup-term' data-popup-id='deltoid'>deltoid</span> and <span class='popup-term' data-popup-id='teres_minor'>teres minor</span>
+        </li>
+        <li>Brings sensory signals from skin over the <span class='popup-term' data-popup-id='lateral'>lateral</span> shoulder</li>
+        <li>Significance: damage can cause loss of motor control of <span class='popup-term' data-popup-id='deltoid'>deltoid</span> and <span class='popup-term' data-popup-id='lateral'>lateral</span> shoulder sensation</li>
+    </ul>
+    </div>
+  url: 
+
+biceps_brachii: 
+  text: |
+    <h1>UNFINISHED - biceps_brachii</h1>
+  url: 
+
+brachialis: 
+  text: |
+    <h1>UNFINISHED - brachialis</h1>
+    <div>Brachialis: <span class='popup-term' data-popup-id='flexion'>flexes</span> forearm at elbow</div>
+  url: 
+
+brachioradialis:
+  text: |
+    <h1>UNFINISHED - brachioradialis</h1>
+    <div>Brachioradialis: <span class='popup-term' data-popup-id='flexion'>flexes</span> forearm</div>
+  url: 
+
+coracobrachialis: 
+  text: |
+    <h1>UNFINISHED - coracobrachialis</h1>
+    <div>Coracobrachialis: <span class='popup-term' data-popup-id='flexion'>flexes</span> and <span class='popup-term' data-popup-id='adduction'>adducts</span> arm at shoulder</div>
+  url: 
+
+circumduction:
+  text: |
+    <div>
+      <p>Circumduction is circular motion of a body part.</p>
+      <p class="popup_example">Ex: Your finger circumducts when it traces the outline of a circle.</p>
+    </div>
+  url: 
+
+deep_brachial_artery: 
+  text: |
+    <h1>UNFINISHED - deep_brachial_artery</h1>
+  url: 
+
+deltoid: 
+  text: |
+    <h1>UNFINISHED - deltoid</h1>
+    <div>Deltoid: arm <span class='popup-term' data-popup-id='flexion'>flexion</span>/<span class='popup-term' data-popup-id='extension'>extension</span>, <span class='popup-term' data-popup-id='medial'>medial</span>/<span class='popup-term' data-popup-id='lateral'>lateral</span> <span class='popup-term' data-popup-id='rotation'>rotation</span>, <span class='popup-term' data-popup-id='abduction'>abduction</span></div>
+  url: 
+
+distal:
+  text: |
+    <h1>UNFINISHED - distal</h1>
+    <div>
+      <p>Distal means farther from a body part's <span class="popup-term" data-popup-id="origin">origin</span>.</p>
+      <p class="popup_example">Ex: Your finger is distal to your forearm because your finger is farther from the shoulder, the arm's <span class="popup-term" data-popup-id="origin">origin.</span></p>
+    </div>
+  url:
+
+extension: 
+  text: |
+    <h1>UNFINISHED - extension</h1>
+  url: 
+
+extensor_carpi_radialis_longus: 
+  text: |
+    <h1>UNFINISHED - extensor_carpi_radialis_longus</h1>
+    <div>Extensor carpi radialis longus: <span class='popup-term' data-popup-id='extension'>extends</span> and <span class='popup-term' data-popup-id='abduction'>abducts</span> hand</div>
+  url: 
+  
+flexion: 
+  text: |
+    <h1>UNFINISHED - flexion</h1>
+  url: 
+
+humerus: 
+  text: |
+    <div>
+      <p>The humerus is the long bone in the upper arm.</p>
+    </div>
+  url: /upper_limb/bones/humerus.html
+
+infraspinatus: 
+  text: |
+    <h1>UNFINISHED - infraspinatus</h1>
+    <div>Infraspinatus: <span class="popup-term" data-popup-id="lateral">lateral</span> <span class="popup-term" data-popup-id="rotation">rotation</span> of arm</div>
+  url: 
+
+insertion: 
+  text: |
+    <h1>UNFINISHED - insertion</h1>
+  url: 
+
+joint_capsule: 
+  text: |
+    <h1>UNFINISHED - joint_capsule</h1>
+  url: 
+
+lateral: 
+  text: |
+    <h1>UNFINISHED - lateral</h1>
+  url: 
+
+latissimus_dorsi: 
+  text: |
+    <h1>UNFINISHED - latissimus_dorsi</h1>
+    <div>Latissimus dorsi: <span class='popup-term' data-popup-id='adduction'>adducts</span>, <span class='popup-term' data-popup-id='medial'>medially</span> <span class='popup-term' data-popup-id='rotation'>rotates</span>, <span class='popup-term' data-popup-id='extension'>extends</span> arm</div>
+  url: 
+
+medial: 
+  text: |
+    <h1>UNFINISHED - medial</h1>
+  url: 
+
+origin:
+  text: |
+    <h1>UNFINISHED - origin</h1>
+    <div>
+      <p>A structure's origin is where it begins. Not all structures have origins.</p>
+      <p class="popup_example">Ex: Your humerus's origin is your shoulder</p>
+    </div>
+  url: 
+
+pectoralis_major: 
+  text: |
+    <h1>UNFINISHED - pectoralis_major</h1>
+    <div>Pectoralis major: <span class='popup-term' data-popup-id='adduction'>adducts</span> and <span class='popup-term' data-popup-id='medial'>medially</span> <span class='popup-term' data-popup-id='rotation'>rotates</span> arm; <span class='popup-term' data-popup-id='flexion'>flexes</span> and <span class='popup-term' data-popup-id='extension'>extends</span> humerus</div>
+  url: 
+  
+posterior: 
+  text: |
+    <h1>UNFINISHED - posterior</h1>
+  url:
+
+posterior_circumflex_humeral_artery: 
+  text: |
+    <h1>UNFINISHED - posterior_circumflex_humeral_artery</h1>
+    <div>
+    <ul>
+        <li>Supplies <span class='popup-term' data-popup-id='deltoid'>deltoid</span>, <span class='popup-term' data-popup-id='teres_minor'>teres minor</span>, <span class='popup-term' data-popup-id='teres_major'>teres major</span>, long/<span class='popup-term' data-popup-id='lateral'>lateral</span> heads of <span class='popup-term' data-popup-id='triceps_brachii'>triceps brachii</span>, shoulder joint, surrounding tissues
+        </li>
+    </ul>
+    </div>
+  url: 
+
+pronation: 
+  text: |
+    <h1>UNFINISHED - pronation</h1>
+  url: 
+
+pronator_teres: 
+  text: |
+    <h1>UNFINISHED - pronator_teres</h1>
+    <div>Pronator teres: <span class='popup-term' data-popup-id='pronation'>pronates</span> forearm; assists in elbow <span class='popup-term' data-popup-id='flexion'>flexion</span></div>
+  url: 
+
+proximal: 
+  text: |
+    <h1>UNFINISHED - proximal</h1>
+  url: 
+
+radial_nerve: 
+  text: |
+    <h1>UNFINISHED - radial_nerve</h1>
+  url:
+
+radius: 
+  text: |
+    <h1>UNFINISHED - radius</h1>
+  url:
+
+rotation:
+  text: |
+    <div>
+      <p>Rotation is turning a body part around its long axis.</p>
+      <p class="popup_example">Ex: Your upper limb rotates when you turn a doorknob.</p>
+    </div>
+  url: 
+
+scapula: 
+  text: |
+    <div>
+      <p>The scapula, also called the shoulder blade, is a flat, triangular-shaped bone in your upper back.</p>
+    </div>
+  url: 
+
+supraspinatus: 
+  text: |
+    <h1>UNFINISHED - supraspinatus</h1>
+    <div>Supraspinatus: <span class="popup-term" data-popup-id="abduction">abduction</span> of arm</div>
+  url: 
+
+superior: 
+  text: |
+    <h1>UNFINISHED - superior</h1>
+  url: 
+
+teres_major: 
+  text: |
+    <h1>UNFINISHED - teres_major</h1>
+    <div>Teres major: <span class='popup-term' data-popup-id='adduction'>adducts</span>, <span class='popup-term' data-popup-id='medial'>medially</span> <span class='popup-term' data-popup-id='rotation'>rotates</span> arm; <span class='popup-term' data-popup-id='extention'>extends</span> <span class='popup-term' data-popup-id='flexion'>flexed</span> arm</div>
+  url: 
+
+teres_minor: 
+  text: |
+    <h1>UNFINISHED - teres_minor</h1>
+    <div>Teres minor: <span class="popup-term" data-popup-id="lateral">lateral</span> <span class="popup-term" data-popup-id="rotation">rotation</span> and <span class="popup-term" data-popup-id="adduction">adduction</span> of arm</div>
+  url: 
+
+triceps_brachii: 
+  text: |
+    <h1>UNFINISHED - triceps_brachii</h1>
+    <div>Triceps brachii: <span class='popup-term' data-popup-id='extension'>extends</span> forearm at elbow</div>
+  url: 
+
+ulna: 
+  text: |
+    <h1>UNFINISHED - ulna</h1>
+  url: 

@@ -28,3 +28,5 @@ Thumbs.db
 .sass-cache/
 .cache/
 
+# Files I don't want to push
+*hide*

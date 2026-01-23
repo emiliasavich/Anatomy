@@ -18,6 +18,8 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<script src="{{ '/assets/js/toggle-popups.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/anterior-posterior.js' | relative_url }}"></script>
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -76,4 +78,24 @@ layout: default
   {% elsif page.id and page.related %}
     {% include page__related.html posts=site.posts %}
   {% endif %}
+</div>
+
+{% comment %}
+  Output the popups from data file
+{% endcomment %}
+<div id="popups-container">
+  {% assign popup_elements = site.data.popup_content | elements %}
+  {% for element in popup_elements %}
+  <div id="{{ element[0] }}-overlay"class="popup-overlay"></div>
+  <div id="{{ element[0] }}" class="popup-content">
+    {{ element[1].text | raw }}
+    {% if element[1].url and element[1].url != "" %}
+      <a href="{{ element[1].url | relative_url }}">
+        More Information
+      </a>
+    {% else if element[1].url %}
+      <span class="link-placeholder">Information Page Coming Soon</span>
+    {% endif %}
+  </div>
+{% endfor %}
 </div>
