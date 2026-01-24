@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Privacy Policy"
+    url: /privacy_policy/
   - title: "About"
     url: /about/
       #- title: "Terms &amp; Privacy Policy"
