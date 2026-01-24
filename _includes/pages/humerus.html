@@ -32,8 +32,8 @@
             <div class="image-gallery">
                 {% for img in bone.images %}
                 {% assign base_name = img.src | remove: ".png" %}
-                <figure class="toggle-container enlarge">
-                    <div class="image-container">
+                <figure class="toggle-container">
+                    <div class="image-container enlarge">
                         <img class="img-default" src="{{ '/assets/images/bones/humerus/labeled joints/' | append: img.src | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <div class="alt-text img-default">{{ img.alt }}</div>
                         <img class="img-hover" src="{{ '/assets/images/bones/humerus/labeled joints/' | append: base_name | append: ' - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -43,6 +43,7 @@
                 </figure>
                 {% endfor %}
             </div>
+            <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
         </li>
         {% endfor %}
 
@@ -94,8 +95,9 @@
                     src="{{ '/assets/images/bones/humerus/unlabeled landmarks/' | append: base_file | relative_url }}"
                     {% if forloop.first == false %}
                     style="display:none;"
+                    onerror="this.nextElementSibling.setAttribute('show', '');"
                     {% else %}
-                    onerror="this.nextElementSibling.style.display='block';"
+                    onerror="this.nextElementSibling.style.display='block'; this.nextElementSibling.setAttribute('show', '');"
                     {% endif %}
                     >
                 <div class="alt-text img-{{ view }} img-default"
@@ -108,8 +110,9 @@
                     src="{{ '/assets/images/bones/humerus/unlabeled landmarks/' | append: isolated_file | relative_url }}"
                     {% if forloop.first == false %}
                     style="display:none;"
+                    onerror="this.nextElementSibling.setAttribute('show', '');"
                     {% else %}
-                    onerror="this.nextElementSibling.style.display='block';"
+                    onerror="this.nextElementSibling.style.display='block'; this.nextElementSibling.setAttribute('show', '');"
                     {% endif %}
                     >
                 <div class="alt-text img-{{ view }} img-hover"
@@ -131,6 +134,7 @@
         </div>
         {% endfor %}
         </div>
+        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
     {% endfor %}
 
     <!-- <h3>Tubercles</h3>

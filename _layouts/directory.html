@@ -1,7 +1,6 @@
 ---
 layout: single-no-right
 ---
-
 <div class="directory-grid">
 {% for slug in page.directory_children_order %}
   {% assign p = site.pages | where: "slug", slug | first %}
