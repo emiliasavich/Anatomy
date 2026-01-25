@@ -57,7 +57,6 @@
       base: crest of greater tubercle
       views:
         - anterior
-        - lateral
 
     - name: Lesser Tubercle
       description:
@@ -74,7 +73,6 @@
       base: crest of lesser tubercle
       views:
         - anterior
-        - medial
 
 - title: "Body"
   landmarks:
