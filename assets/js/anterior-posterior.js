@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.classList.add('active');
 
         // Only toggle images inside this image container
-        const images = imgContainer.querySelectorAll('.img-anterior, .img-posterior');
+        const images = imgContainer.querySelectorAll('.img-anterior, .img-posterior, .img-medial, .img-lateral, .img-superior, .img-inferior');
         images.forEach(img => {
             if (img.classList.contains('img-' + view) && (!img.classList.contains('alt-text') || img.hasAttribute('show'))) {
             img.style.display = 'block';

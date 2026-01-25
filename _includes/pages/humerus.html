@@ -92,7 +92,7 @@
 
                 <!-- Default Image -->
                 <img class="img-{{ view }} img-default"
-                    src="{{ '/assets/images/bones/humerus/unlabeled landmarks/' | append: base_file | relative_url }}"
+                    src="{{ '/assets/images/bones/humerus/labeled landmarks/' | append: base_file | relative_url }}"
                     {% if forloop.first == false %}
                     style="display:none;"
                     onerror="this.nextElementSibling.setAttribute('show', '');"
@@ -107,7 +107,7 @@
 
                 <!-- Isolated Image -->
                 <img class="img-{{ view }} img-hover"
-                    src="{{ '/assets/images/bones/humerus/unlabeled landmarks/' | append: isolated_file | relative_url }}"
+                    src="{{ '/assets/images/bones/humerus/labeled landmarks/' | append: isolated_file | relative_url }}"
                     {% if forloop.first == false %}
                     style="display:none;"
                     onerror="this.nextElementSibling.setAttribute('show', '');"

@@ -23,6 +23,8 @@ function toggleOverlay(images) {
   // Remove existing overlay if present
   const existingOverlay = document.querySelector(".big-image-overlay");
   if (existingOverlay) {
+    const big_images = existingOverlay.querySelectorAll("img");
+    setSameToggle(images, big_images);
     existingOverlay.remove();
     return;
   }
@@ -33,10 +35,16 @@ function toggleOverlay(images) {
   overlay.appendChild(stack);
   document.body.appendChild(overlay);
 
+  const big_images = overlay.querySelectorAll("img");
+
   // Close overlay on click or right-click
-  overlay.addEventListener("click", () => overlay.remove());
+  overlay.addEventListener("click", (e) => {
+    setSameToggle(images, big_images);
+    overlay.remove();
+  });
   overlay.addEventListener("contextmenu", (e) => {
     e.preventDefault();
+    setSameToggle(images, big_images);
     overlay.remove();
   });
 }
@@ -81,13 +89,13 @@ function createImageStack(images) {
   });
 
   img1.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent overlay from receiving the click
-      toggleLabeled([img1, img2]);
+    e.stopPropagation(); // prevent overlay from receiving the click
+    toggleLabeled([img1, img2]);
   });
 
   img2.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent overlay from receiving the click
-      toggleLabeled([img1, img2]); // call the named function
+    e.stopPropagation(); // prevent overlay from receiving the click
+    toggleLabeled([img1, img2]); // call the named function
   });
 
   const stack = document.createElement("div");
@@ -131,4 +139,12 @@ function toggleLabeled(images) {
       img.setAttribute("src", src.replace("/unlabeled", "/labeled"));
     }
   });
+}
+
+// Make changes to enlarged image propagate to small image
+function setSameToggle(images, big_images) {
+  overlayIsLabeled = big_images[0].src.includes("/labeled");
+  originalIsLabeled = images[0].src.includes("/labeled");
+
+  if (originalIsLabeled != overlayIsLabeled) toggleLabeled(images);
 }

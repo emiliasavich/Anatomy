@@ -38,7 +38,6 @@
       base: intertubercular sulcus
       views:
         - anterior
-        - posterior
 
     - name: Greater Tubercle
       description:
@@ -48,6 +47,7 @@
       base: greater tubercle
       views:
         - anterior
+        - lateral
         - posterior
 
     - name: Crest of Greater Tubercle
@@ -57,7 +57,7 @@
       base: crest of greater tubercle
       views:
         - anterior
-        - posterior
+        - lateral
 
     - name: Lesser Tubercle
       description:
@@ -66,7 +66,6 @@
       base: lesser tubercle
       views:
         - anterior
-        - posterior
 
     - name: Crest of Lesser Tubercle
       description:
@@ -75,7 +74,7 @@
       base: crest of lesser tubercle
       views:
         - anterior
-        - posterior
+        - medial
 
 - title: "Body"
   landmarks:
