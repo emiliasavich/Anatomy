@@ -44,6 +44,7 @@
       subtitle: "Anterior View"
     - src: "radius - medial.png"
       alt: "Humeroradial Joint Medial View"
+      subtitle: "Medial View"
     - src: "radius - posterior.png"
       alt: "Humeroradial Joint Posterior View"
       subtitle: "Posterior View"
