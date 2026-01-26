@@ -1,6 +1,14 @@
 - name: Scapula
   subtitle: Glenohumeral Joint
-  description: "The humerus's head articulates with the <span class=\"popup-term\" data-popup-id=\"scapula\">scapula</span>'s glenoid fossa, forming the <em>glenohumeral joint</em>. This synovial ball-and-socket joint allows <span class=\"popup-term\" data-popup-id=\"circumduction\">circumduction</span> and <span class=\"popup-term\" data-popup-id=\"rotation\">rotation</span>. The humeral head is rounded like a ball, while the glenoid fossa is concave like a cup."
+  description: |
+    The <em>humer</em>us's head <span class='popup-term' data-popup-id='articulate'>articulates</span> with the <span class="popup-term" data-popup-id="scapula">scapula</span>'s <em>gleno</em>id fossa, forming the <em>glenohumer</em>al joint:
+    <ul>
+      <li><span class="bullet-head">Humeral head:</span> spherical, like a ball</li>
+      <li><span class="bullet-head">Glenoid fossa:</span> a socket, concave like a cup</li>
+      <li><span class="bullet-head">Joint type:</span> <span class='popup-term' data-popup-id='synovial'>synovial</span> <span class='popup-term' data-popup-id='ball-and-socket'>ball-and-socket</span></li>
+      <li><span class="bullet-head">Allowed motion:</span> <span class="popup-term" data-popup-id="circumduction">circumduction</span> and <span class="popup-term" data-popup-id="rotation">rotation</span></li>
+    </ul>
+
   images:
     - src: "scapula - anterior.png"
       alt: "Glenohumeral Joint Anterior View"
@@ -20,7 +28,16 @@
 
 - name: Radius
   subtitle: Humeroradial Joint - Part of Elbow Joint
-  description: "The humerus's capitulum articulates with the radius's head, forming a pivot joint that allows hinging and rotation. The radius head is disk-shaped, while the humeral capitulum is rounded."
+  description: | 
+    The <em>humer</em>us's capitulum <span class='popup-term' data-popup-id='articulate'>articulates</span> with the <span class="popup-term" data-popup-id="radius"><em>radi</em>us</span>'s head, forming the <em>humer</em>o<em>radi</em>al joint:
+    <ul>
+      <li><span class="bullet-head">Humeral capitulum:</span> rounded</li>
+      <li><span class="bullet-head">Radial head:</span> concave</li>
+      <li><span class="bullet-head">Joint type:</span> <span class="popup-term" data-popup-id="synovial">synovial</span> <span class="popup-term" data-popup-id="pivot">pivot</span></li>
+      <li><span class="bullet-head">Allowed motion:</span> <span class="popup-term" data-popup-id="pronation">pronation</span>, <span class='popup-term' data-popup-id='supination'>supination</span>, <span class='popup-term' data-popup-id='flexion'>flexion</span>, and <span class='popup-term' data-popup-id='extension'>extension</span></li>
+    </ul>
+
+
   images:
     - src: "radius - anterior.png"
       alt: "Humeroradial Joint Anterior View"

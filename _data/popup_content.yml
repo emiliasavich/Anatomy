@@ -24,9 +24,17 @@ anterior_circumflex_humeral_artery:
     </div>
   url: 
 
+articulate: 
+  text: |
+    <div>
+      <p><strong>Articulate</strong> means to form a joint with another bone.</p>
+      <p class="popup_example">Ex: The <span class='popup-term' data-popup-id='humerus'>humerus</span> articulates (forms a joint with) the <span class='popup-term' data-popup-id='scapula'>scapula</span>.</p>
+    </div>
+  url: 
+
 axillary_nerve: 
   text: |
-    <h1>UNFINISHED - axillary_nerve</h1>
+    <h1>UNFINISHED - axillary_nerv</h1>
     <div>
     <ul>
         <li>Sends motor signals to <span class='popup-term' data-popup-id='deltoid'>deltoid</span> and <span class='popup-term' data-popup-id='teres_minor'>teres minor</span>
@@ -34,6 +42,14 @@ axillary_nerve:
         <li>Brings sensory signals from skin over the <span class='popup-term' data-popup-id='lateral'>lateral</span> shoulder</li>
         <li>Significance: damage can cause loss of motor control of <span class='popup-term' data-popup-id='deltoid'>deltoid</span> and <span class='popup-term' data-popup-id='lateral'>lateral</span> shoulder sensation</li>
     </ul>
+    </div>
+  url: 
+
+ball-and-socket: 
+  text: |
+    <div>
+      <p>A <strong><em>ball</em>-and-<em>socket</em></strong> joint is a <span class='popup-term' data-popup-id='synovial'>synovial</span> joint where the <em>ball</em>-like (spherical) head of one bone fits into a <em>socket</em> (cup-like structure) of another bone.</p>
+      <p class="popup_example">Ex: Your shoulder is a ball-and-socket joint.</p>
     </div>
   url: 
 
@@ -63,7 +79,7 @@ coracobrachialis:
 circumduction:
   text: |
     <div>
-      <p>Circumduction is circular motion of a body part.</p>
+      <p><strong>Circumduction</strong> is circular motion of a body part.</p>
       <p class="popup_example">Ex: Your finger circumducts when it traces the outline of a circle.</p>
     </div>
   url: 
@@ -107,7 +123,7 @@ flexion:
 humerus: 
   text: |
     <div>
-      <p>The humerus is the long bone in the upper arm.</p>
+      <p>The <strong>humerus</strong> is the long bone in the upper arm.</p>
     </div>
   url: /upper_limb/bones/humerus.html
 
@@ -157,7 +173,12 @@ pectoralis_major:
     <h1>UNFINISHED - pectoralis_major</h1>
     <div>Pectoralis major: <span class='popup-term' data-popup-id='adduction'>adducts</span> and <span class='popup-term' data-popup-id='medial'>medially</span> <span class='popup-term' data-popup-id='rotation'>rotates</span> arm; <span class='popup-term' data-popup-id='flexion'>flexes</span> and <span class='popup-term' data-popup-id='extension'>extends</span> humerus</div>
   url: 
-  
+
+pivot: 
+  text: |
+    <h1>UNFINISHED - pivot</h1>
+  url: 
+
 posterior: 
   text: |
     <h1>UNFINISHED - posterior</h1>
@@ -197,13 +218,15 @@ radial_nerve:
 
 radius: 
   text: |
-    <h1>UNFINISHED - radius</h1>
+    <div>
+      <p>The <strong>radius</strong> is the <span class='popup-term' data-popup-id='lateral'>lateral</span> bone of the forearm. It lies on the same side of the forearm as the thumb does.</p>
+    </div>
   url:
 
 rotation:
   text: |
     <div>
-      <p>Rotation is turning a body part around its long axis.</p>
+      <p><strong>Rotation</strong> is turning a body part around its long axis.</p>
       <p class="popup_example">Ex: Your upper limb rotates when you turn a doorknob.</p>
     </div>
   url: 
@@ -211,7 +234,7 @@ rotation:
 scapula: 
   text: |
     <div>
-      <p>The scapula, also called the shoulder blade, is a flat, triangular-shaped bone in your upper back.</p>
+      <p>The <strong>scapula</strong>, also called the shoulder blade, is a flat, triangular-shaped bone in your upper back.</p>
     </div>
   url: 
 
@@ -224,6 +247,18 @@ supraspinatus:
 superior: 
   text: |
     <h1>UNFINISHED - superior</h1>
+  url: 
+
+supination: 
+  text: |
+    <h1>UNFINISHED - supination</h1>
+  url: 
+
+synovial: 
+  text: |
+    <div>
+      <p>A <strong>synovial</strong> joint is a fluid-filled capsule that connects two bones and allows for a large range of motion.</p>
+    </div>
   url: 
 
 teres_major: 

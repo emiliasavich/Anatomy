@@ -20,6 +20,58 @@ figcaption {
   font-family: inherit;
 }
 
+/******************************
+Location Figure
+*******************************/
+.location-figure-container {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff; /* light neutral background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  margin: 0;
+}
+
+.location-figure-container img {
+  max-height: 400px;
+  width: auto;
+  margin-bottom: 7px;
+}
+
+.location-figure-container figcaption {
+  text-align: center;
+  font-size: 0.6rem;
+  margin: 0;
+}
+
+/******************************
+Shape Figure
+*******************************/
+.location-shape-container {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff; /* light neutral background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-items: center;
+  margin: 0;
+}
+
+.location-shape-container img {
+  max-height: 250px;
+  width: auto;
+  margin-bottom: 7px;
+}
+
+.location-shape-container figcaption {
+  text-align: center;
+  font-size: 0.6rem;
+  margin: 0;
+}
+
 /*******************************
 Bone Five Steps Overview
 *******************************/
@@ -775,4 +827,16 @@ tutorial
   margin: 0 !important;
   font-size: 0.7em;
   color: #AAAAAA;
+}
+
+.tutorial-with-margin {
+  @extend .tutorial;
+  margin-top: 20px !important;
+}
+
+/*********************************
+Bullet Styles
+********************************/
+.bullet-head {
+  color: gray;
 }

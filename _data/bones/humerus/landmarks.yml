@@ -83,6 +83,7 @@
       base: deltoid tuberosity
       views:
         - anterior
+        - lateral
         - posterior
 
     - name: Body
@@ -100,7 +101,6 @@
         - "Fractures here risk nerve injury"
       base: radial groove
       views:
-        - anterior
         - posterior
 
 - title: "Borders"
@@ -113,7 +113,6 @@
       base: anterior border
       views:
         - anterior
-        - posterior
 
     - name: <span class='popup-term' data-popup-id='lateral'>Lateral</span> Border
       description:
@@ -124,18 +123,19 @@
       base: lateral border
       views:
         - anterior
+        - lateral
         - posterior
 
     - name: <span class='popup-term' data-popup-id='medial'>Medial</span> Border
       description:
         - "<span class='popup-term' data-popup-id='medial'>Medial</span> ridge on body, starts at lesser tubercle"
-        - "Interrupted by radial groove"
         - "<span class='popup-term' data-popup-id='distal'>Distal</span> end is medial supracondylar ridge"
         - "Separates <span class='popup-term' data-popup-id='anterior'>antero</span><span class='popup-term' data-popup-id='medial'>medial</span> from <span class='popup-term' data-popup-id='posterior'>posterior</span> surface"
       base: medial border
       views:
         - anterior
         - posterior
+        - medial
 
 - title: Surfaces
   landmarks:
@@ -170,7 +170,6 @@
             - <span class='popup-term' data-popup-id='lateral'>Lateral</span> head: <span class='popup-term' data-popup-id='superior'>superior</span> to radial groove
       base: posterior surface
       views:
-        - anterior
         - posterior
 
 - title: Supracondylar Ridges
