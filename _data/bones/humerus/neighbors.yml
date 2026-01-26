@@ -12,19 +12,19 @@
   images:
     - src: "scapula - anterior.png"
       alt: "Glenohumeral Joint Anterior View"
-      subtitle: "Anterior View"
+      subtitle: "<span class='popup-term' data-popup-id='anterior'>Anterior</span> View"
     - src: "scapula - medial.png"
       alt: "Glenohumeral Joint Medial View"
-      subtitle: "Medial View"
+      subtitle: "<span class='popup-term' data-popup-id='medial'>Medial</span> View"
     - src: "scapula - posterior.png"
       alt: "Glenohumeral Joint Posterior View"
-      subtitle: "Posterior View"
+      subtitle: "<span class='popup-term' data-popup-id='posterior'>Posterior</span> View"
     - src: "scapula - lateral.png"
       alt: "Glenohumeral Joint Lateral View"
-      subtitle: "Lateral View"
+      subtitle: "<span class='popup-term' data-popup-id='lateral'>Lateral</span> View"
     - src: "scapula - superior.png"
       alt: "Glenohumeral Joint Superior View"
-      subtitle: "Superior View"
+      subtitle: "<span class='popup-term' data-popup-id='superior'>Superior</span> View"
 
 - name: Radius
   subtitle: Humeroradial Joint - Part of Elbow Joint
@@ -41,16 +41,16 @@
   images:
     - src: "radius - anterior.png"
       alt: "Humeroradial Joint Anterior View"
-      subtitle: "Anterior View"
+      subtitle: "<span class='popup-term' data-popup-id='anterior'>Anterior</span> View"
     - src: "radius - medial.png"
       alt: "Humeroradial Joint Medial View"
-      subtitle: "Medial View"
+      subtitle: "<span class='popup-term' data-popup-id='medial'>Medial</span> View"
     - src: "radius - posterior.png"
       alt: "Humeroradial Joint Posterior View"
-      subtitle: "Posterior View"
+      subtitle: "<span class='popup-term' data-popup-id='posterior'>Posterior</span> View"
     - src: "radius - lateral.png"
       alt: "Humeroradial Joint Lateral View"
-      subtitle: "Lateral View"
+      subtitle: "<span class='popup-term' data-popup-id='lateral'>Lateral</span> View"
 
 - name: Ulna
   subtitle: Humeroulnar Joint - Part of Elbow Joint
@@ -58,13 +58,13 @@
   images:
     - src: "ulna - anterior.png"
       alt: "Humeroulnar Joint Anterior View"
-      subtitle: "Anterior View"
+      subtitle: "<span class='popup-term' data-popup-id='anterior'>Anterior</span> View"
     - src: "ulna - medial.png"
       alt: "Humeroulnar Joint Medial View"
-      subtitle: "Medial View"
+      subtitle: "<span class='popup-term' data-popup-id='medial'>Medial</span> View"
     - src: "ulna - posterior.png"
       alt: "Humeroulnar Joint Posterior View"
-      subtitle: "Posterior View"
+      subtitle: "<span class='popup-term' data-popup-id='posterior'>Posterior</span> View"
     - src: "ulna - lateral.png"
       alt: "Humeroulnar Joint Lateral View"
-      subtitle: "Lateral View"
+      subtitle: "<span class='popup-term' data-popup-id='lateral'>Lateral</span> View"
