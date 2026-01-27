@@ -34,7 +34,7 @@
       <li><span class="bullet-head">Humeral capitulum:</span> rounded</li>
       <li><span class="bullet-head">Radial head:</span> concave</li>
       <li><span class="bullet-head">Joint type:</span> <span class="popup-term" data-popup-id="synovial">synovial</span> <span class="popup-term" data-popup-id="pivot">pivot</span></li>
-      <li><span class="bullet-head">Allowed motion:</span> <span class="popup-term" data-popup-id="pronation">pronation</span>, <span class='popup-term' data-popup-id='supination'>supination</span>, <span class='popup-term' data-popup-id='flexion'>flexion</span>, and <span class='popup-term' data-popup-id='extension'>extension</span></li>
+      <li><span class="bullet-head">Allowed motion:</span> <span class="popup-term" data-popup-id="pronation">pronation</span>, <span class='popup-term' data-popup-id='supination'>supination</span>, <span class='popup-term' data-popup-id='flexion'>flexion</span>, and <span class='popup-term' data-popup-id='extension'>extension of the forearm</span></li>
     </ul>
 
 
@@ -54,7 +54,15 @@
 
 - name: Ulna
   subtitle: Humeroulnar Joint - Part of Elbow Joint
-  description: "The humerus's trochlea articulates with the ulna's trochlear notch, forming a hinge joint that allows flexion and extension of the forearm. The ulna’s notch is C-shaped and wraps around the humeral trochlea."
+  description: | 
+    The <em>humer</em>us's trochlea <span class='popup-term' data-popup-id='articulate'>articulates</span> with the <span class='popup-term' data-popup-id='ulna'><em>uln</em>a</span>'s trochlear notch, forming the <em>humer</em>o<em>uln</em>ar joint:
+    <ul>
+      <li><span class="bullet-head">Humeral trochlea:</span> cylindrical structure narrower in the middle than on the outside (like an hourglass)</li>
+      <li><span class="bullet-head">Ulnar trochlear notch:</span> C-shaped, wraps around humeral trochlea</li>
+      <li><span class="bullet-head">Joint type:</span> <span class='popup-term' data-popup-id='synovial'>synovial</span> <span class='popup-term' data-popup-id='hinge'>hinge</span></li>
+      <li><span class="bullet-head">Allowed motion:</span> <span class='popup-term' data-popup-id='flexion'>flexion</span> and <span class='popup-term' data-popup-id='extension'>extension</span> of the forearm</li>
+    </ul>
+
   images:
     - src: "ulna - anterior.png"
       alt: "Humeroulnar Joint Anterior View"

@@ -8,6 +8,13 @@ adduction:
     <h1>UNFINISHED - adduction</h1>
   url: 
 
+anatomical_position:
+  text: |
+    <div>
+      <p>The <strong>anatomical position</strong> is the body position used as a reference when describing anatomical structures. In this position, the body stands upright, faces forward, and has arms at the side, palms facing forward, legs parallel, and feet pointing forward.</p>
+    </div>
+  url:
+
 anterior: 
   text: |
     <div>
@@ -133,7 +140,10 @@ distal:
 
 extension: 
   text: |
-    <h1>UNFINISHED - extension</h1>
+    <div>
+      <p><strong>Extension</strong> is a movement that brings two body parts farther apart in the <span class='popup-term' data-popup-id='sagittal_plane'>sagittal plane</span> (aka looking at the body in the <span class='popup-term' data-popup-id='anatomical_position'>anatomical position</span> from the side).</p>
+      <p class='popup_example'>Ex: Extension of the elbow brings the forearm farther from the upper arm.</p>
+    </div>
   url: 
 
 extensor_carpi_radialis_longus: 
@@ -144,8 +154,19 @@ extensor_carpi_radialis_longus:
   
 flexion: 
   text: |
-    <h1>UNFINISHED - flexion</h1>
+    <div>
+      <p><strong>Flexion</strong> is a movement that brings two body parts closer together in the <span class='popup-term' data-popup-id='sagittal_plane'>sagittal plane</span> (aka when looking at a body in the <span class='popup-term' data-popup-id='anatomical_position'>anatomical position</span> from the side).</p>
+      <p class='popup_example'>Ex: Flexion of the elbow brings the forearm closer to the upper arm.</p>
+    </div>
   url: 
+
+hinge: 
+  text: |
+    <div>
+      <p>A <strong>hinge</strong> joint is a <span class='popup-term' data-popup-id='synovial'>synovial</span> joint that allows for movement in one plane (typically <span class='popup-term' data-popup-id='flexion'>flexion</span> and <span class='popup-term' data-popup-id='extension'>extension</span> in the <span class='popup-term' data-popup-id='sagittal_plane'>sagittal plane</span>).</p>
+      <p class='popup_example'>Ex: The elbow is a hinge joint that allows <span class='popup-term' data-popup-id='flexion'>flexion</span> and <span class='popup-term' data-popup-id='extension'>extension</span> of your forearm.</p>
+    </div>
+  url:
 
 humerus: 
   text: |
@@ -259,7 +280,10 @@ posterior_circumflex_humeral_artery:
 
 pronation: 
   text: |
-    <h1>UNFINISHED - pronation</h1>
+    <div>
+      <p><strong>Pronation</strong> of the hand and forearm is a <span class='popup-term' data-popup-id='rotation'>rotation</span> that makes the palm face downward. Pronation of the foot is the inward rolling of the foot during walking.</p>
+      <p class='popup_example'>Ex: Your hand is pronated when it lays palm-down on a table.</p>
+    </div>
   url: 
 
 pronator_teres: 
@@ -281,7 +305,7 @@ radial_nerve:
 radius: 
   text: |
     <div>
-      <p>The <strong>radius</strong> is the <span class='popup-term' data-popup-id='lateral'>lateral</span> bone of the forearm. It lies on the same side of the forearm as the thumb does.</p>
+      <p>The <strong>radius</strong> is the <span class='popup-term' data-popup-id='lateral'>lateral</span> bone of the forearm in <span class='popup-term' data-popup-id='anatomical_position'>anatomical position</span>. It lies on the same side of the forearm as the thumb does.</p>
     </div>
   url:
 
@@ -289,7 +313,7 @@ rotation:
   text: |
     <div>
       <p><strong>Rotation</strong> is turning a body part around its long axis.</p>
-      <p class="popup_example">Ex: Your upper limb rotates when you turn a doorknob.</p>
+      <p class="popup_example">Ex: Your arm rotates when you turn a doorknob.</p>
     </div>
   url: 
 
@@ -305,6 +329,13 @@ sacrum:
   text: |
     <div>
       <p>The <strong>sacrum</strong> is an irregular, triangular bone at the bottom of your spine that forms the back of the <span class='popup-term' data-popup-id='pelvis'>pelvis</span>.</p>
+    </div>
+  url:
+
+sagittal_plane: 
+  text: |
+    <div>
+      <p>The <strong>sagittal plane</strong> divides the body into left and right halves. This plane is commonly used to show movements that go forward and backward, like <span class='popup-term' data-popup-id='flexion'>flexion</span> and <span class='popup-term' data-popup-id='extension'>extension</span>.</p>
     </div>
   url:
 
@@ -338,7 +369,10 @@ superior:
 
 supination: 
   text: |
-    <h1>UNFINISHED - supination</h1>
+    <div>
+      <p><strong>Supination</strong> of the hand and forearm is a <span class='popup-term' data-popup-id='rotation'>rotation</span> that makes the palm face upwards. Supination of the foot is an outward rolling caused by placing weight on the outer edge of the foot during walking.</p>
+      <p class='popup_example'>Ex: Your hand is supinated when it lays palm-up on a table.</p>
+    </div>
   url: 
 
 synovial: 
@@ -376,7 +410,9 @@ triceps_brachii:
 
 ulna: 
   text: |
-    <h1>UNFINISHED - ulna</h1>
+    <div>
+      <p>The <strong>ulna</strong> is the <span class='popup-term' data-popup-id='medial'>medial</span> bone of the forearm in <span class='popup-term' data-popup-id='anatomical_position'>anatomical position</span>. It lies on the same side of the forearm as the pinky does.</p>
+    </div>
   url: 
 
 vertebrae: 
