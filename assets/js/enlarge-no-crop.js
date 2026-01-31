@@ -6,7 +6,10 @@ const EnlargeNoCrop = (() => {
     const imageArea = container.querySelector('[class*="image-container"]') || container;
 
     // Click to toggle labeled images (existing functionality)
-    imageArea.addEventListener("click", () => toggleLabeled(images));
+    imageArea.addEventListener("click", () => {
+      if (isDrag(e)) return;
+      toggleLabeled(images)
+    });
 
     // Right-click to open overlay
     imageArea.addEventListener("contextmenu", (e) => {
@@ -36,6 +39,7 @@ const EnlargeNoCrop = (() => {
 
     // Close overlay on click or right-click
     overlay.addEventListener("click", (e) => {
+      if (isDrag(e)) return;
       setSameToggle(images, big_images);
       overlay.remove();
     });
@@ -86,11 +90,13 @@ const EnlargeNoCrop = (() => {
     });
 
     img1.addEventListener("click", (e) => {
+      if (isDrag(e)) return;
       e.stopPropagation(); // prevent overlay from receiving the click
       toggleLabeled([img1, img2]);
     });
 
     img2.addEventListener("click", (e) => {
+      if (isDrag(e)) return;
       e.stopPropagation(); // prevent overlay from receiving the click
       toggleLabeled([img1, img2]); // call the named function
     });

@@ -47,11 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Only add click handler if the popup wasn't already active
     if (!popup.classList.contains("active")) {
       popup.addEventListener("click", (e) => {
+        if (isDrag(e)) return;
         e.stopPropagation();
         hideTopPopup();
       });
 
       overlay.addEventListener("click", (e) => {
+        if (isDrag(e)) return;
         e.stopPropagation();
         hidePopups();
       });
@@ -88,13 +90,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!popup || !overlay) return; 
 
     term.addEventListener("click", function(e) {
+      if (isDrag(e)) return;
       e.stopPropagation();
       showPopup(term, popup, overlay);
     });
   });
 
   // Clicking outside closes all
-  document.addEventListener("click", hidePopups);
+  document.addEventListener("click", (e) => {
+    if (isDrag(e)) return;
+    hidePopups(e)
+ });
 
   // Handle window resize
   window.addEventListener("resize", () => {

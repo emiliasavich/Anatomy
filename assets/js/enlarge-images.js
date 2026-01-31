@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageArea = container.querySelector('[class*="image-container"]') || container;
     
     // Left click on original just toggles labeled/unlabeled
-    imageArea.addEventListener("click", () => toggleLabeled(images));
+    imageArea.addEventListener("click", (e) => {
+      if (isDrag(e)) return;
+      e.stopPropagation();
+      toggleLabeled(images);
+    });
 
     // Right click opens the enlarged view
     imageArea.addEventListener("contextmenu", (e) => {
@@ -105,6 +109,7 @@ function openEnlargedClone(originalContainer) {
   // B. Click Logic (Toggle Labeled/Unlabeled on the clone)
   if (cloneImgContainer) {
     cloneImgContainer.addEventListener("click", (e) => {
+      if (isDrag(e)) return;
       e.stopPropagation(); // Don't bubble to overlay
       toggleLabeled(cloneImages);
     });
@@ -164,6 +169,7 @@ function openEnlargedClone(originalContainer) {
 
   // Close on backdrop click
   overlay.addEventListener("click", (e) => {
+    if (isDrag(e)) return;
     if (e.target === overlay) closeAndSync();
   });
 

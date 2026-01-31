@@ -14,11 +14,13 @@ function addViewButtonFunctionality(container) {
         // let activeView = activeButton?.dataset.view;
 
         buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                if (isDrag(e)) return;
+                e.stopPropagation();
                 let newActiveView = btn.dataset.view;
 
                 // go up to shared container
-                const shared_container = btn.closest(".shared-landmark-container");
+                const shared_container = btn.closest(".shared-image-container");
                 const circles = shared_container.querySelectorAll('.hoverable-circle');
 
                 // Toggle active button

@@ -29,60 +29,259 @@
 
   <div class="step step-neighbors">
     <h2>Step 3 – Neighbors</h2>
-    <ul class="neighbors-list">
-        {% for bone in site.data.bones.humerus.neighbors %}
-        <li class="neighbor-item">
-            <h3>{{ bone.name }}</h3>
-            <p class="neighbor-subtitle">{{ bone.subtitle }}</p>
-            <p>{{ bone.description }}</p>
-            
-            <div class="image-gallery">
-                {% for view in bone.views %}
+    {% for big_picture in site.data.bones.humerus.neighbors %}
+    <div class="content-toggle-box" id="neighbors-{{big_picture.big_picture_name | slugify}}">
+        <div class="content-toggle-header">
+            <!-- Header line with icon -->
+            <div class="content-toggle-header-line">
+                <button class="content-toggle-icon">
+                    <span class="content-toggle-plus">+</span>
+                </button>
+                <h2><span class='popup-term' data-popup-id='{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | capitalize}}</span></h2>
+            </div>
 
-                <div class="neighbor-box">
-                <div class="shared-neighbor-container enlarge">
-                    <div class="neighbor-hover-button-bar"></div>
-                    <div class="neighbor-image-container">
-                        {% assign view_list = view | split: '"' %}
-                        {% assign view_name = view_list[1] %}
+            <!-- Content area -->
+            <div class="content-area">
+                <div class="image-container hoverable-image enlarge">
+                    <!-- Isolated -->
+                    <div class="isolated active">
+                        <img
+                            src="/assets/images/bones/humerus/labeled neighbors/{{big_picture.image_name}} - isolated.png"
+                            class="isolated"
+                            onerror="this.nextElementSibling.style.display='block'"
+                            >
+                        <div class="alt-text" style="display:none;">
+                            {{big_picture.big_picture_name}} Neighbors of Humerus - Isolated
+                        </div>
+                    </div>
+                    <!-- With Other Bones -->
+                    <div class="not_isolated">
+                        <img
+                            src="/assets/images/bones/humerus/labeled neighbors/{{big_picture.image_name}} - not isolated.png"
+                            class="not_isolated"
+                            onerror="this.nextElementSibling.style.display='block'"
+                            >
+                        <div class="alt-text" style="display:none;">
+                            {{big_picture.big_picture_name}} Neighbors of Humerus - Not Isolated
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div>
+                        The <span class='popup-term' data-popup-id='{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | downcase}}</span> end of the humerus <span class='popup-term' data-popup-id='articulate'>articulates</span> with the following bones:
+                        <ul>
+                        {% for child in big_picture.elements %}
+                            <li><a href="#" class="child-jump" data-child="neighbors-{{child.name | slugify}}">{{child.name}}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-toggle-content">
+            {% for child in big_picture.elements %}
+                <div class="content-toggle-child" id="neighbors-{{child.name | slugify}}">
+                    <div class="content-toggle-child-text">
+                        <!-- Make flexbox to put tutorial at the bottom of the box -->
+                        <div>
+                            <h3>{{ child.name }}</h3>
+                            <p class="neighbor-subtitle">{{ child.subtitle }}</p>
+                            <p>{{ child.description }}</p>
+                        </div>
+                        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
+                    </div>
+                    <div class="shared-image-container enlarge">
+                        <div class="hover-button-bar"></div>
+                        <div class="image-container">
+                            {% for view in child.views %}
+                                {% assign view_list = view | split: '"' %}
+                                {% assign view_name = view_list[1] %}
 
-                        {% assign base_file = bone.base | append: " - " | append: view_name %}
-                            
-                        <div class="hoverable-image-container active to-sync" 
-                            data-view="{{ view_name }}"
-                            style="position: relative;">
-                            {% for hover_layer in view[view_name] %}
-                                <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
-                                    {% assign src_url = '/assets/images/bones/humerus/labeled joints/' | append: base_file | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                {% assign base_file = child.base | append: " - " | append: view_name %}
                                     
-                                    <img
-                                        src="{{ src_url | relative_url }}"
-                                        class="{{hover_layer}}"
-                                        onerror="this.nextElementSibling.style.display='block'"
-                                        >
-                                    <div class="alt-text {{hover_layer}}" style="display:none;">
-                                        {{ bone.alt_base }} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
-                                    </div>
+                                <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                    {% for hover_layer in view[view_name] %}
+                                        <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
+                                            {% assign src_url = '/assets/images/bones/humerus/labeled joints/' | append: base_file | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                            <img
+                                                src="{{ src_url | relative_url }}"
+                                                class="{{hover_layer}}"
+                                                onerror="this.nextElementSibling.style.display='block'"
+                                                >
+                                            <div class="alt-text {{hover_layer}}" style="display:none;">
+                                                {{ child.alt_base }} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
                             {% endfor %}
                         </div>
-                    </div>
-                    <div class="neighbor-figcaption figcaption">{{ view_name | capitalize }} View</div>
-                </div>
-                </div>
-                {% endfor %}
-            </div>
-            <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
-        </li>
-        {% endfor %}
 
-    </ul>
+                        <!-- View Buttons -->
+                        <div class="view-buttons">
+                        {% for view in child.views %}
+                            {% assign view_list = view | split: '"' %}
+                            {% assign view_name = view_list[1] %}
+                            <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                {{ view_name | capitalize }}
+                                <!-- View -->
+                            </button>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
   </div>
 
   <div class="step step-landmarks">
     <h2>Step 4 – Anatomical Landmarks</h2>
 
-    {% for group in site.data.bones.humerus.landmarks %}
+    {% for big_picture in site.data.bones.humerus.landmarks %}
+    <div class="content-toggle-box" id="landmarks-{{big_picture.big_picture_name | slugify}}">
+        <div class="content-toggle-header">
+            <!-- Header line with icon -->
+            <div class="content-toggle-header-line">
+                <button class="content-toggle-icon">
+                    <span class="content-toggle-plus">+</span>
+                </button>
+                <h2>{{big_picture.big_picture_name}}</h2>
+            </div>
+
+            <!-- Content area -->
+            <div class="content-area">
+                <div>
+                    <div class="shared-image-container enlarge">
+                    <div class="hover-button-bar" style="display: none;"></div>
+                    <div class="image-container">
+                        {% for view in site.data.four_views %}
+                            {% assign view_list = view | split: '"' %}
+                            {% assign view_name = view_list[1] %}
+                                
+                            <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                {% for hover_layer in view[view_name] %}
+                                    <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
+                                        {% assign src_url = '/assets/images/bones/humerus/labeled landmark headers/' | append: {{big_picture.big_picture_name | downcase}} | append: ' - ' | append: view_name | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                        <img
+                                            src="{{ src_url | relative_url }}"
+                                            class="{{hover_layer}}"
+                                            onerror="this.nextElementSibling.style.display='block'"
+                                            >
+                                        <div class="alt-text {{hover_layer}}" style="display:none;">
+                                            {{big_picture.big_picture_name}} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- View Buttons -->
+                    <div class="view-buttons">
+                    {% for view in site.data.four_views %}
+                        {% assign view_list = view | split: '"' %}
+                        {% assign view_name = view_list[1] %}
+                        <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                            {{ view_name | capitalize }}
+                            <!-- View -->
+                        </button>
+                    {% endfor %}
+                    </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div>
+                        The <span class='popup-term' data-popup-id='{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | downcase}}</span> of the humerus encompasses the following landmarks:
+                        <ul>
+                        {% for child in big_picture.elements %}
+                            <li><a href="#" class="child-jump" data-child="landmark-{{child.name | slugify}}">{{child.name}}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-toggle-content">
+            {% for child in big_picture.elements %}
+                <div class="content-toggle-child" id="landmark-{{child.name | slugify}}">
+                    <div class="content-toggle-child-text">
+                        <!-- Make flexbox to put tutorial at the bottom of the box -->
+                        <div>
+                            <h3>{{ child.name }}</h3>
+                            <ul>
+                            {% for desc in child.description %}
+                                <li>
+                                {% if desc.text %}
+                                    {{ desc.text }}
+                                    {% if desc.subpoints %}
+                                        <ul>
+                                        {% for sub in desc.subpoints %}
+                                            <li>{{ sub }}</li>
+                                        {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% else %}
+                                    {{ desc }}
+                                {% endif %}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
+                    </div>
+                    <div class="shared-image-container enlarge">
+                        <div class="hover-button-bar"></div>
+                        <div class="image-container">
+                            {% for view in child.views %}
+                                {% assign view_list = view | split: '"' %}
+                                {% assign view_name = view_list[1] %}
+
+                                {% assign base_file = child.base | append: " - " | append: view_name %}
+                                    
+                                <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                    {% for hover_layer in view[view_name] %}
+                                        <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
+                                            {% assign src_url = '/assets/images/bones/humerus/labeled landmarks/' | append: base_file | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                            <img
+                                                src="{{ src_url | relative_url }}"
+                                                class="{{hover_layer}}"
+                                                onerror="this.nextElementSibling.style.display='block'"
+                                                >
+                                            <div class="alt-text {{hover_layer}}" style="display:none;">
+                                                {{ child.name }} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- View Buttons -->
+                        <div class="view-buttons">
+                        {% for view in child.views %}
+                            {% assign view_list = view | split: '"' %}
+                            {% assign view_name = view_list[1] %}
+                            <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                {{ view_name | capitalize }}
+                                <!-- View -->
+                            </button>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+    <!-- {% for group in site.data.bones.humerus.landmarks %}
     <h3>{{ group.title }}</h3>
     <div class="landmark-gallery">
         {% for landmark in group.landmarks %}
@@ -136,10 +335,10 @@
                     {% endfor %}
                 </div>
             {% endfor %}
-            </div>
+            </div> -->
 
             <!-- View Buttons -->
-            <div class="view-buttons">
+            <!-- <div class="view-buttons">
             {% for view in landmark.views %}
                 {% assign view_list = view | split: '"' %}
                 {% assign view_name = view_list[1] %}
@@ -153,608 +352,7 @@
         {% endfor %}
         </div>
         <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
-    {% endfor %}
-
-    <!-- <h3>Tubercles</h3>
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Intertubercular Sulcus</p>
-            <ul>
-            <li>Groove between tubercles</li>
-            <li>Also called bicipital groove due to relation with biceps brachii tendon</li>
-            <li>Guides long tendon of biceps brachii</li>
-            <li>Insertion site for latissimus dorsi tendon
-                <ul>
-                <li>Latissimus dorsi: adducts, medially rotates, extends arm</li>
-                </ul>
-            </li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/intertubercular sulcus.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Intertubercular Sulcus</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/intertubercular sulcus - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Intertubercular Sulcus</div>
-        </div>
-    </div>
-
-
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Greater Tubercle</p>
-            <ul>
-            <li>Lateral projection between anatomical and surgical neck</li>
-            <li>Insertion site for supraspinatus, infraspinatus, teres minor (rotator cuff muscles)
-                <ul>
-                <li>Supraspinatus: abduction of arm</li>
-                <li>Infraspinatus: lateral rotation of arm</li>
-                <li>Teres minor: lateral rotation and adduction of arm</li>
-                </ul>
-            </li>
-            <li>Covered by deltoid to form rounded shoulder</li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/greater tubercle.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Greater Tubercle</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/greater tubercle - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Greater Tubercle</div>
-        </div>
-    </div>
-
-
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Crest of Greater Tubercle</p>
-            <ul>
-            <li>Lateral lip of intertubercular sulcus</li>
-            <li>Insertion site for pectoralis major tendon
-                <ul>
-                <li>Pectoralis major: adducts and medially rotates arm; flexes and extends humerus</li>
-                </ul>
-            </li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/crest of greater tubercle.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Crest of Greater Tubercle</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/crest of greater tubercle - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Crest of Greater Tubercle</div>
-        </div>
-    </div>
-
-
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Lesser Tubercle</p>
-            <ul>
-            <li>Anterior projection between anatomical and surgical neck</li>
-            <li>Insertion site for subscapularis (rotator cuff muscle)
-                <ul>
-                <li>Subscapularis: medial rotation of arm</li>
-                </ul>
-            </li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lesser tubercle.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Lesser Tubercle</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lesser tubercle - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Lesser Tubercle</div>
-        </div>
-    </div>
-
-
-   <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Crest of Lesser Tubercle</p>
-            <ul>
-            <li>Medial lip of intertubercular sulcus</li>
-            <li>Insertion site for teres major tendon
-                <ul>
-                <li>Teres major: adducts, medially rotates arm; extends flexed arm</li>
-                </ul>
-            </li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/crest of lesser tubercle.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Crest of Lesser Tubercle</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/crest of lesser tubercle - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Crest of Lesser Tubercle</div>
-        </div>
-    </div>
-    </div>
-
-
-    <h3>Body</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Deltoid Tuberosity</p>
-            <ul>
-            <li>Rough lateral region in middle of humerus</li>
-            <li>Insertion site for deltoid muscle
-                <ul>
-                <li>Deltoid: arm flexion/extension, medial/lateral rotation, abduction</li>
-                </ul>
-            </li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/deltoid tuberosity.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Deltoid Tuberosity</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/deltoid tuberosity - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Deltoid Tuberosity</div>
-        </div>
-    </div>
-
-
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Body</p>
-            <ul>
-            <li>Shaft of humerus, long midsection of bone</li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/body of humerus.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Body</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/body of humerus - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Body</div>
-        </div>
-    </div>
-
-
-   <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Radial Groove</p>
-            <ul>
-            <li>Spiral groove on posterior shaft</li>
-            <li>Contains radial nerve and deep brachial artery</li>
-            <li>Fractures here risk nerve injury</li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/radial groove.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Radial Groove</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/radial groove - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Radial Groove</div>
-        </div>
-    </div>
-    </div>
-
-    <h3>Borders</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Anterior Border</p>
-            <ul>
-            <li>Anterior ridge on body, starts at greater tubercle</li>
-            <li>Proximal end is crest of greater tubercle</li>
-            <li>Separates anteromedial and anterolateral surfaces</li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/anterior border.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Anterior Border</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/anterior border - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Anterior Border</div>
-        </div>
-    </div>
-
-
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Lateral Border</p>
-            <ul>
-            <li>Lateral ridge on body, starts at greater tubercle</li>
-            <li>Middle part next to deltoid tuberosity</li>
-            <li>Distal end is lateral supracondylar ridge</li>
-            <li>Separates anterolateral from posterior surface</li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lateral border.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Lateral Border</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lateral border - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Lateral Border</div>
-        </div>
-    </div>
-
-
-    <div class="landmark-box">
-        <div class="landmark-content">
-            <p class="landmarks-item">Medial Border</p>
-            <ul>
-            <li>Medial ridge on body, starts at lesser tubercle</li>
-            <li>Interrupted by radial groove</li>
-            <li>Distal end is medial supracondylar ridge</li>
-            <li>Separates anteromedial from posterior surface</li>
-            </ul>
-        </div>
-
-        <div class="landmark-image-container enlarge">
-            <img class="img-default"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/medial border.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-default">Medial Border</div>
-
-            <img class="img-hover"
-                src="{{ '/assets/images/bones/humerus/unlabeled landmarks/medial border - isolated.png' | relative_url }}"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="alt-text img-hover">Isolated Medial Border</div>
-        </div>
-    </div>
-    </div>
-
-
-    <h3>Surfaces</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Anteromedial Surface</p>
-        <ul>
-        <li>Surface between anterior and medial borders</li>
-        <li>Encompasses intertubercular groove</li>
-        <li>Distal portion covered by brachialis
-            <ul>
-            <li>Brachialis: flexes forearm at elbow</li>
-            </ul>
-        </li>
-        <li>Insertion site for coracobrachialis
-            <ul>
-            <li>Coracobrachialis: flexes and adducts arm at shoulder</li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/anteromedial surface.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Anteromedial Surface</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/anteromedial surface - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Anteromedial Surface</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Anterolateral Surface</p>
-        <ul>
-        <li>Surface between anterior and lateral borders, encompasses deltoid tuberosity</li>
-        <li>Proximal portion covered by deltoid
-            <ul>
-            <li>Deltoid: arm flexion/extension, medial/lateral rotation, abduction</li>
-            </ul>
-        </li>
-        <li>Origin site for lateral brachialis
-            <ul>
-            <li>Brachialis: flexes forearm at elbow</li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/anterolateral surface.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Anterolateral Surface</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/anterolateral surface - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Anterolateral Surface</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Posterior Surface</p>
-        <ul>
-        <li>Surface between lateral and medial borders, behind the shaft</li>
-        <li>Covered by medial head of triceps brachii
-            <ul>
-            <li>Triceps brachii: extends forearm at elbow</li>
-            </ul>
-        </li>
-        <li>Origin site for medial and lateral heads of triceps
-            <ul>
-            <li>Medial head: inferior to radial groove</li>
-            <li>Lateral head: superior to radial groove</li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/posterior surface.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Posterior Surface</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/posterior surface - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Posterior Surface</div>
-    </div>
-    </div>
-    </div>
-
-    <h3>Supracondylar Ridges</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Lateral Supracondylar Ridge</p>
-        <ul>
-        <li>Ridge above lateral epicondyle</li>
-        <li>Origin site for brachioradialis and extensor carpi radialis longus
-            <ul>
-            <li>Brachioradialis: flexes forearm</li>
-            <li>Extensor carpi radialis longus: extends and abducts hand</li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lateral supracondylar ridge.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Lateral Supracondylar Ridge</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lateral supracondylar ridge - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Lateral Supracondylar Ridge</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Medial Supracondylar Ridge</p>
-        <ul>
-        <li>Ridge above medial epicondyle</li>
-        <li>Origin site for pronator teres
-            <ul>
-            <li>Pronator teres: pronates forearm; assists in elbow flexion</li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/medial supracondylar ridge.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Medial Supracondylar Ridge</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/medial supracondylar ridge - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Medial Supracondylar Ridge</div>
-    </div>
-    </div>
-    </div>
-
-    <h3>Epicondyles</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Lateral Epicondyle</p>
-        <ul>
-        <li>Small lateral prominence on distal humerus</li>
-        <li>Attachment for radial collateral ligament
-            <ul><li>Stabilizes elbow</li></ul>
-        </li>
-        <li>Origin for forearm extensors
-            <ul>
-            <li>Extensor carpi radialis brevis</li>
-            <li>Extensor digitorum</li>
-            <li>Extensor digiti minimi</li>
-            <li>Extensor carpi ulnaris</li>
-            <li>Anconeus</li>
-            <li>Supinator</li>
-            </ul>
-        </li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lateral epicondyle.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Lateral Epicondyle</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/lateral epicondyle - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Lateral Epicondyle</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Medial Epicondyle</p>
-        <ul>
-        <li>Larger medial prominence on distal humerus</li>
-        <li>Origin for forearm flexors and ulnar collateral ligament
-            <ul>
-            <li>Flexor carpi ulnaris</li>
-            <li>Palmaris longus</li>
-            <li>Flexor carpi radialis</li>
-            <li>Pronator teres</li>
-            <li>Flexor digitorum superficialis</li>
-            <li>Ulnar Collateral Ligament: stabilizes elbow</li>
-            </ul>
-        </li>
-        <li>Posterior groove for ulnar nerve</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/medial epicondyle.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Medial Epicondyle</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/medial epicondyle - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Medial Epicondyle</div>
-    </div>
-    </div>
-    </div>
-
-    <h3>Fossas</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Radial Fossa</p>
-        <ul>
-        <li>Small anterior depression superior to capitulum and lateral to coronoid fossa</li>
-        <li>Accommodates radial head during elbow flexion</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/radial fossa.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Radial Fossa</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/radial fossa - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Radial Fossa</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Coronoid Fossa</p>
-        <ul>
-        <li>Anterior depression superior to trochlea</li>
-        <li>Accommodates coronoid process of ulna during deep elbow flexion</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/coronoid fossa.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Coronoid Fossa</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/coronoid fossa - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Coronoid Fossa</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Olecranon Fossa</p>
-        <ul>
-        <li>Large posterior depression superior to trochlea</li>
-        <li>Accommodates olecranon process of ulna during elbow extension</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/olecranon fossa.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Olecranon Fossa</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/olecranon fossa - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Olecranon Fossa</div>
-    </div>
-    </div>
-    </div>
-
-    <h3>Distal Structures</h3>
-
-    <div class="landmark-gallery">
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Trochlea</p>
-        <ul>
-        <li>Pulley-shaped structure on medial distal humerus</li>
-        <li>Articulates with trochlear notch of ulna for hinge movement</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/trochlea.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Trochlea</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/trochlea - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Trochlea</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Capitulum</p>
-        <ul>
-        <li>Rounded lateral distal humerus</li>
-        <li>Articulates with head of radius for forearm rotation and flexion</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/capitulum.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Capitulum</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/capitulum - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Capitulum</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Condyle</p>
-        <ul>
-        <li>Encapsulates trochlea and capitulum</li>
-        <li>Forms elbow joint surface</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/condyle.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Condyle</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/condyle - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Condyle</div>
-    </div>
-    </div>
-
-    <div class="landmark-box">
-    <div class="landmark-content">
-        <p class="landmarks-item">Groove for Ulnar Nerve (Cubital Groove)</p>
-        <ul>
-        <li>Posterior medial epicondyle groove where ulnar nerve runs</li>
-        <li>“Funny bone” area</li>
-        </ul>
-    </div>
-    <div class="landmark-image-container enlarge">
-        <img class="img-default" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/cubital groove.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-default">Cubital Groove</div>
-        <img class="img-hover" src="{{ '/assets/images/bones/humerus/unlabeled landmarks/cubital groove - isolated.png' | relative_url }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="alt-text img-hover">Isolated Cubital Groove</div>
-    </div>
-    </div>
-    </div> -->
+    {% endfor %} -->
 
   </div>
 
@@ -769,6 +367,10 @@
             <li>Teres major: adducts, medially rotates arm; extends flexed arm</li>
             <li>Coracobrachialis: flexes and adducts arm at shoulder</li>
         </ul>
+
+        subtext:
+            - <span class='popup-term' data-popup-id='medial'>Medial</span> head: <span class='popup-term' data-popup-id='inferior'>inferior</span> to radial groove
+            - <span class='popup-term' data-popup-id='lateral'>Lateral</span> head: <span class='popup-term' data-popup-id='superior'>superior</span> to radial groove
         </li>
     </ul>
 
