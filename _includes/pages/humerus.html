@@ -196,7 +196,7 @@
                 </div>
                 <div class="content-text">
                     <div>
-                        The <span class='popup-term' data-popup-id='{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | downcase}}</span> of the humerus encompasses the following landmarks:
+                        The {{big_picture.big_picture_name | downcase}} of the humerus encompasses the following landmarks:
                         <ul>
                         {% for child in big_picture.elements %}
                             <li><a href="#" class="child-jump" data-child="landmark-{{child.name | slugify}}">{{child.name}}</a></li>

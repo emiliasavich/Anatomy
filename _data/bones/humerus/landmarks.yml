@@ -293,9 +293,9 @@
         - posterior:
             - isolated
             - default
-    - name: Medial Epicondyle of Humerus
+    - name: <span class='popup-term' data-popup-id='medial'>Medial</span> Epicondyle of Humerus
       description:
-        - Larger medial prominence on distal end of humerus
+        - Larger <span class='popup-term' data-popup-id='medial'>medial</span> prominence on distal end of humerus
         - Origin for forearm flexor muscles and ulnar collateral ligament
         - Forearm flexors - flex wrist and fingers; assist in pronation
         - Flexor carpi ulnaris

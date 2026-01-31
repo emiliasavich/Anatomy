@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     term.addEventListener("click", function(e) {
       if (isDrag(e)) return;
       e.stopPropagation();
+      e.preventDefault();
       showPopup(term, popup, overlay);
     });
   });
