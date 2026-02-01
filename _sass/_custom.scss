@@ -102,9 +102,17 @@ Bone Five Steps Overview
   background-color: #eff6ff;
 }
 
+.location-color {
+  color: #3b82f6;
+}
+
 .step-shape {
   border-left-color: #16a34a;          /* green */
   background-color: #ecfdf5;
+}
+
+.shape-color {
+  color: #16a34a;
 }
 
 .step-neighbors {
@@ -112,14 +120,40 @@ Bone Five Steps Overview
   background-color: #f5f3ff;
 }
 
+.neighbors-color {
+  color: #7c3aed;
+}
+
 .step-landmarks {
   border-left-color: #ea580c;          /* orange */
   background-color: #fff7ed;
 }
 
+.landmarks-color {
+  color: #ea580c;
+}
+
 .step-blood {
   border-left-color: #dc2626;          /* red */
   background-color: #fef2f2;
+}
+
+.blood-supply-color {
+  color: #dc2626;
+}
+
+.step-overview {
+  padding: 10px 10px 10px;
+}
+
+.step-overview ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.step-overview p {
+  margin: 0;
+  font-weight: bold;
 }
 
 /* Optional: tighten lists */
@@ -180,13 +214,13 @@ Bone Five Steps Overview
 Neighbors for 
 ********************************/
 /* Step Neighbors Section */
-.step-neighbors {
-  padding: 2rem;
-  background-color: #f9f9f9; /* light neutral background */
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+// .step-neighbors {
+//   padding: 2rem;
+//   background-color: #f9f9f9; /* light neutral background */
+//   border-radius: 12px;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+//   // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+// }
 
 .neighbors-list {
   list-style: none;
