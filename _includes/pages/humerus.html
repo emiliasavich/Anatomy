@@ -1,13 +1,63 @@
 <div>
-  <p><strong>Goal:</strong> Understand how the humerus relates to the body as a whole.</p>
+  <p><strong>Goal:</strong> Understand how the humerus (the bone in your upper arm extending from the shoulder to the elbow) relates to the body as a whole.</p>
   
   <p><strong>Purpose:</strong> To encourage deeper, longer-lasting learning by linking the bone to the skeletal, muscular, and cardiovascular systems rather than relying on rote memorization.</p>
 
   <p><strong>How to use this guide:</strong> Follow the <a href="{{ '/getting_started/effective_learning_methods/learning_bones.html' | relative_url }}">five structured steps</a> below. They are designed to help you focus on meaningful connections rather than just memorizing facts.</p>
 
+   <div class="content-toggle-box" style="font-size:0.8em; margin-bottom: 30px;">
+        <div class="content-toggle-header">
+            <!-- Header line with icon -->
+            <div class="content-toggle-header-line">
+                <button class="content-toggle-icon" style="width: 20px; height: 20px;">
+                    <span class="content-toggle-plus" style="font-size:2em">+</span>
+                </button>
+                <h2>Click to read about the five steps. Then click to close.</h2>
+            </div>
+        </div>
+        <div class="content-toggle-content" style="padding: 10px 15px 10px; margin-bottom: 30px; font-size: 0.8rem;">
+            <p>Each step relates the bone to the bigger picture to help you understand the material and remember it for longer.</p>
+            <div class="step-location step-overview">
+                <p class="location-color">Location</p>
+                <ul>
+                    <li><span class="location-color">Question:</span> Where is the bone?</li>
+                    <li><span class="location-color">Purpose:</span> Helps you build a mental map of the skeleton.</li>
+                </ul>
+            </div>
+            <div class="step-shape step-overview">
+                <p class="shape-color">Shape</p>
+                <ul>
+                    <li><span class="shape-color">Question:</span> What is the bone's shape?</li>
+                    <li><span class="shape-color">Purpose:</span> Gives insight into how the bone interacts with the body.</li>
+                </ul>
+            </div>
+            <div class="step-neighbors step-overview">
+                <p class="neighbors-color">Neighbors</p>
+                <ul>
+                    <li><span class="neighbors-color">Question:</span> What bones <span class='popup-term' data-popup-id='articulate'>articulate</span> (form joints with) this bone?</li>
+                    <li><span class="neighbors-color">Purpose:</span> Lets you examine what joints the bone is part of and what movements those joints allow.</li>
+                </ul>
+            </div>
+            <div class="step-landmarks step-overview">
+            <p class="landmarks-color">Anatomical Landmarks</p>
+            <ul>
+                <li><span class="landmarks-color">Question:</span> What are the named parts of the bone? What is the significance of each?</li>
+                <li><span class="landmarks-color">Purpose:</span> Connects each named location to the muscles, nerves, blood vessels, and other bones that interact with the location.</li>
+            </ul>
+            </div>
+            <div class="step-blood step-overview">
+            <p class="blood-supply-color">Blood Supply</p>
+            <ul>
+                <li><span class="blood-supply-color">Question:</span> What blood vessels nourish the bone?</li>
+                <li><span class="blood-supply-color">Purpose:</span> Relates the bone to the cardiovascular system and builds your mental map of the body's blood vessels.</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
   <div class="step step-location">
     <h2>Step 1 – Location</h2>
-    <p>Upper Arm</p>
+    <p>The humerus is found in the <strong>upper arm</strong> between the shoulder and elbow.</p>
     <figure class="location-figure-container enlarge-no-crop">
         <img src="{{ '/assets/images/bones/humerus/Humerus - location.png' | relative_url }}" alt="Humerus Location">
         <figcaption>Humerus</figcaption>
@@ -17,7 +67,7 @@
 
   <div class="step step-shape">
     <h2>Step 2 – Shape</h2>
-    <p>Long Bone - functions as a lever that enables movement of the arm</p>
+    <p>The humerus is a <strong>long bone</strong>, so it functions as a lever to enable movement of the arm.</p>
     <figure class="location-shape-container">
         <div class="enlarge">
             <img src="{{ '/assets/images/bones/humerus/Humerus - shape.png' | relative_url }}" alt="Humerus Location">
@@ -29,6 +79,7 @@
 
   <div class="step step-neighbors">
     <h2>Step 3 – Neighbors</h2>
+    <p>The humerus has neighboring bones at its two ends: the <span class='popup-term' data-popup-id='proximal'>proximal</span> end at the shoulder, and the <span class='popup-term' data-popup-id='distal'>distal</span> end at the elbow.</p>
     {% for big_picture in site.data.bones.humerus.neighbors %}
     <div class="content-toggle-box" id="neighbors-{{big_picture.big_picture_name | slugify}}">
         <div class="content-toggle-header">
@@ -68,7 +119,7 @@
                 </div>
                 <div class="content-text">
                     <div>
-                        The <span class='popup-term' data-popup-id='{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | downcase}}</span> end of the humerus <span class='popup-term' data-popup-id='articulate'>articulates</span> with the following bones:
+                        The <span class='popup-term' data-popup-id='{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | downcase}}</span> end of the humerus <span class='popup-term' data-popup-id='articulate'>articulates</span> with the following bones: 
                         <ul>
                         {% for child in big_picture.elements %}
                             <li><a href="#" class="child-jump" data-child="neighbors-{{child.name | slugify}}">{{child.name}}</a></li>
@@ -76,6 +127,7 @@
                         </ul>
                     </div>
                     <div>
+                        <p class="tutorial" style="font-size: 1em;">Click the bulleted names for more information.</p>
                         <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
                     </div>
                 </div>
@@ -141,7 +193,7 @@
 
   <div class="step step-landmarks">
     <h2>Step 4 – Anatomical Landmarks</h2>
-
+    <p>The humerus has many named landmarks. Most are sites of muscle attachment. Some are grooves that tendons, nerves, and blood vessels pass along. Others are indentations (fossas) that accomodate parts of neighboring bones during movement.</p>
     {% for big_picture in site.data.bones.humerus.landmarks %}
     <div class="content-toggle-box" id="landmarks-{{big_picture.big_picture_name | slugify}}">
         <div class="content-toggle-header">
@@ -204,6 +256,7 @@
                         </ul>
                     </div>
                     <div>
+                        <p class="tutorial" style="font-size: 1em;">Click the bulleted names for more information.</p>
                         <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
                     </div>
                 </div>
