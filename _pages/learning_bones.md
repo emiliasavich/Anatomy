@@ -28,7 +28,7 @@ permalink: /getting_started/effective_learning_methods/learning_bones.html
     <p><strong>Question:</strong> What is the bone’s shape?</p>
     <p><strong>Purpose:</strong> A bone’s shape is closely linked to its function. Recognizing the shape gives insight into the bone’s role in movement and support.</p>
 
-    <h3>Common Shapes:</h3>
+    <h3>Common Shapes</h3>
     <ul class="shape-list">
     <li>
       <p><strong>Long:</strong> Functions as a lever that enables large movements.</p>
@@ -74,7 +74,7 @@ permalink: /getting_started/effective_learning_methods/learning_bones.html
   <div class="step step-landmarks">
     <h2>Step 4 – Anatomical Landmarks</h2>
     <p><strong>Question:</strong> What are the bone’s named landmarks, and why is each important?</p>
-    <p><strong>Purpose:</strong> Understanding each landmark’s significance, including the muscles and ligaments that attach there, enhances both recall and functional knowledge.</p>
+    <p><strong>Purpose:</strong> Understanding each landmark’s significance, such as what muscles, nerves, blood vessels, and other bones interact with the location, enhances both recall and functional knowledge.</p>
   </div>
 
   <div class="step step-blood">

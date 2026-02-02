@@ -1,8 +1,9 @@
 - big_picture_name: "Head and Neck"
+  singular: true
   elements:
     - name: Head
       description:
-        - "<span class='popup-term' data-popup-id='popup-articulate'>Articulates</span> with glenoid fossa of <span class=\"popup-term\" data-popup-id=\"popup-scapula\">scapula</span> to form shoulder (glenohumeral) joint"
+        - "<span class='popup-term' data-popup-id='popup-articulate'>Articulates</span> with glenoid fossa of <span class=\"popup-term\" data-popup-id=\"popup-scapula\">scapula</span> to form the shoulder (glenohumeral) joint"
       base: head
       views:
         - anterior:
@@ -15,7 +16,7 @@
     - name: Anatomical Neck
       description:
         - "Narrow region <span class=\"popup-term\" data-popup-id=\"popup-distal\">distal</span> to the humerus's head"
-        - "Attachment site for shoulder <span class=\"popup-term\" data-popup-id=\"popup-joint_capsule\">joint capsule</span>"
+        - "Attachment site for the glenohumeral <span class=\"popup-term\" data-popup-id=\"popup-joint_capsule\">joint's capsule</span>"
       base: anatomical neck
       views:
         - anterior:
@@ -40,13 +41,14 @@
             - isolated
             - default
 - big_picture_name: "Tubercles"
+  singular: false
   elements:
     - name: Intertubercular Sulcus
       description:
-        - "Groove between tubercles"
-        - "Guides long tendon of <span class=\"popup-term\" data-popup-id=\"popup-biceps_brachii\">biceps brachii</span>"
-        - "Also called bicipital groove due to relation with <span class=\"popup-term\" data-popup-id=\"popup-biceps_brachii\">biceps brachii</span> tendon"
-        - "<span class=\"popup-term\" data-popup-id=\"popup-insertion\">Insertion</span> site for <span class=\"popup-term\" data-popup-id=\"popup-latissimus_dorsi\">latissimus dorsi</span> tendon"
+        - "Groove between the greater and lesser tubercles"
+        - "Guides the long tendon of the <span class=\"popup-term\" data-popup-id=\"popup-biceps_brachii\">biceps brachii</span>"
+        - "Also called the bicipital groove due to its relation with the <span class=\"popup-term\" data-popup-id=\"popup-biceps_brachii\">biceps brachii</span> tendon"
+        - "<span class=\"popup-term\" data-popup-id=\"popup-insertion\">Insertion</span> site for the <span class=\"popup-term\" data-popup-id=\"popup-latissimus_dorsi\">latissimus dorsi</span> "
       base: intertubercular sulcus
       views:
         - anterior:
@@ -55,9 +57,9 @@
 
     - name: Greater Tubercle
       description:
-        - "<span class=\"popup-term\" data-popup-id=\"popup-lateral\">Lateral</span> projection between anatomical and surgical neck"
+        - "<span class=\"popup-term\" data-popup-id=\"popup-lateral\">Lateral</span> projection between the anatomical and surgical necks"
         - "<span class=\"popup-term\" data-popup-id=\"popup-insertion\">Insertion</span> site for <span class=\"popup-term\" data-popup-id=\"popup-supraspinatus\">supraspinatus</span>, <span class=\"popup-term\" data-popup-id=\"popup-infraspinatus\">infraspinatus</span>, <span class=\"popup-term\" data-popup-id=\"popup-teres_minor\">teres minor</span> (rotator cuff muscles)"
-        - "Covered by <span class='popup-term' data-popup-id='popup-deltoid'>deltoid</span> to form rounded shoulder"
+        - "Covered by the <span class='popup-term' data-popup-id='popup-deltoid'>deltoid</span> to form a person's rounded shoulder"
       base: greater tubercle
       views:
         - anterior:
@@ -72,8 +74,8 @@
 
     - name: Crest of Greater Tubercle
       description:
-        - "<span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> lip of intertubercular sulcus"
-        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for <span class='popup-term' data-popup-id='popup-pectoralis_major'>pectoralis major</span> tendon"
+        - "<span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> lip of the intertubercular sulcus"
+        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for the <span class='popup-term' data-popup-id='popup-pectoralis_major'>pectoralis major's</span> tendon"
       base: crest of greater tubercle
       views:
         - anterior:
@@ -82,8 +84,8 @@
 
     - name: Lesser Tubercle
       description:
-        - "<span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> projection between anatomical and surgical neck"
-        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for <span class='popup-term' data-popup-id='popup-subscapularis'>subscapularis</span> (rotator cuff muscle)"
+        - "<span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> projection between the anatomical and surgical necks"
+        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for the <span class='popup-term' data-popup-id='popup-subscapularis'>subscapularis</span> (rotator cuff muscle)"
       base: lesser tubercle
       views:
         - anterior:
@@ -92,8 +94,8 @@
 
     - name: Crest of Lesser Tubercle
       description:
-        - "<span class='popup-term' data-popup-id='popup-medial'>Medial</span> lip of intertubercular sulcus"
-        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for <span class='popup-term' data-popup-id='popup-teres_major'>teres major</span> tendon"
+        - "<span class='popup-term' data-popup-id='popup-medial'>Medial</span> lip of the intertubercular sulcus"
+        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for the <span class='popup-term' data-popup-id='popup-teres_major'>teres major's</span> tendon"
       base: crest of lesser tubercle
       views:
         - anterior:
@@ -101,11 +103,12 @@
             - default
 
 - big_picture_name: "Body"
+  singular: true
   elements:
     - name: Deltoid Tuberosity
       description:
-        - "Rough <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> region in middle of humerus"
-        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for <span class='popup-term' data-popup-id='popup-deltoid'>deltoid</span> muscle"
+        - "Rough <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> region in the middle of humerus"
+        - "<span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for the <span class='popup-term' data-popup-id='popup-deltoid'>deltoid</span>"
       base: deltoid tuberosity
       views:
         - anterior:
@@ -120,7 +123,7 @@
 
     - name: Body
       description:
-        - "Shaft of humerus, long midsection of bone"
+        - "The shaft of the humerus (the bone's long midsection)"
       base: body
       views:
         - anterior:
@@ -132,8 +135,8 @@
 
     - name: Radial Groove
       description:
-        - "Spiral groove on <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> shaft"
-        - "Contains <span class='popup-term' data-popup-id='popup-radial_nerve'>radial nerve</span> and <span class='popup-term' data-popup-id='popup-deep_brachial_artery'>deep brachial artery</span>"
+        - "Spiral groove on the shaft's <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> surface"
+        - "Guides the <span class='popup-term' data-popup-id='popup-radial_nerve'>radial nerve</span> and <span class='popup-term' data-popup-id='popup-deep_brachial_artery'>deep brachial artery</span>"
         - "Fractures here risk nerve injury"
       base: radial groove
       views:
@@ -142,12 +145,13 @@
             - default
 
 - big_picture_name: "Borders"
+  singular: false
   elements:
     - name: <span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> Border
       description:
-        - "<span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> ridge on body of humerus, starts at greater tubercle"
-        - "<span class='popup-term' data-popup-id='popup-proximal'>Proximal</span> end is crest of greater tubercle"
-        - "Separates <span class='popup-term' data-popup-id='popup-anterior'>antero</span><span class='popup-term' data-popup-id='popup-medial'>medial</span> and <span class='popup-term' data-popup-id='popup-anterior'>antero</span><span class='popup-term' data-popup-id='popup-lateral'>lateral</span> surfaces"
+        - "<span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> ridge on the humerus's body"
+        - "<span class='popup-term' data-popup-id='popup-proximal'>Proximal</span> end is the crest of the greater tubercle"
+        - "Separates the <span class='popup-term' data-popup-id='popup-anteromedial'>anteromedial</span> and <span class='popup-term' data-popup-id='popup-anterolateral'>anterolateral</span> surfaces"
       base: anterior border
       views:
         - anterior:
@@ -156,10 +160,11 @@
 
     - name: <span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> Border
       description:
-        - "<span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> ridge on body, starts at greater tubercle"
-        - "Middle part next to deltoid tuberosity"
-        - "<span class='popup-term' data-popup-id='popup-distal'>Distal</span> end is <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> supracondylar ridge"
-        - "Separates <span class='popup-term' data-popup-id='popup-anterior'>antero</span><span class='popup-term' data-popup-id='popup-lateral'>lateral</span> from <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> surface"
+        - "<span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> ridge on the humerus's body"
+        - "Starts at the greater tubercle"
+        - "Runs next to the deltoid tuberosity"
+        - "<span class='popup-term' data-popup-id='popup-distal'>Distal</span> end is the <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> supracondylar ridge"
+        - "Separates the <span class='popup-term' data-popup-id='popup-anterolateral'>anterolateral</span> and <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> surfaces"
       base: lateral border
       views:
         - anterior:
@@ -174,9 +179,10 @@
 
     - name: <span class='popup-term' data-popup-id='popup-medial'>Medial</span> Border
       description:
-        - "<span class='popup-term' data-popup-id='popup-medial'>Medial</span> ridge on body, starts at lesser tubercle"
-        - "<span class='popup-term' data-popup-id='popup-distal'>Distal</span> end is medial supracondylar ridge"
-        - "Separates <span class='popup-term' data-popup-id='popup-anterior'>antero</span><span class='popup-term' data-popup-id='popup-medial'>medial</span> from <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> surface"
+        - "<span class='popup-term' data-popup-id='popup-medial'>Medial</span> ridge on the humerus's body"
+        - "Starts at the lesser tubercle"
+        - "<span class='popup-term' data-popup-id='popup-distal'>Distal</span> end is the <span class='popup-term' data-popup-id='popup-medial'>medial</span> supracondylar ridge"
+        - "Separates the <span class='popup-term' data-popup-id='popup-anteromedial'>anteromedial</span> and <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> surfaces"
       base: medial border
       views:
         - anterior:
@@ -190,13 +196,14 @@
             - default
 
 - big_picture_name: Surfaces
+  singular: false
   elements:
-    - name: <span class='popup-term' data-popup-id='popup-anterior'>Antero</span><span class='popup-term' data-popup-id='popup-medial'>medial</span> Surface
+    - name: <span class='popup-term' data-popup-id='popup-anteromedial'>Anteromedial</span> Surface
       description:
-        - Surface between <span class='popup-term' data-popup-id='popup-anterior'>anterior</span> and <span class='popup-term' data-popup-id='popup-medial'>medial</span> borders
-        - Encompasses intertubercular groove
-        - <span class='popup-term' data-popup-id='popup-distal'>Distal</span> portion covered by <span class='popup-term' data-popup-id='popup-brachialis'>brachialis</span>
-        - <span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for <span class='popup-term' data-popup-id='popup-coracobrachialis'>coracobrachialis</span>
+        - Surface between the <span class='popup-term' data-popup-id='popup-anterior'>anterior</span> and <span class='popup-term' data-popup-id='popup-medial'>medial</span> borders
+        - Encompasses the intertubercular groove
+        - <span class='popup-term' data-popup-id='popup-distal'>Distal</span> portion is covered by the <span class='popup-term' data-popup-id='popup-brachialis'>brachialis</span>
+        - <span class='popup-term' data-popup-id='popup-insertion'>Insertion</span> site for the <span class='popup-term' data-popup-id='popup-coracobrachialis'>coracobrachialis</span>
       base: anteromedial surface
       views:
         - anterior:
@@ -208,11 +215,12 @@
             - layer1
             - default
 
-    - name: <span class='popup-term' data-popup-id='popup-anterior'>Antero</span><span class='popup-term' data-popup-id='popup-lateral'>lateral</span> Surface
+    - name: <span class='popup-term' data-popup-id='popup-anterolateral'>Anterolateral</span> Surface
       description:
-        - Surface between <span class='popup-term' data-popup-id='popup-anterior'>anterior</span> and <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> borders, encompasses deltoid tuberosity
-        - <span class='popup-term' data-popup-id='popup-proximal'>Proximal</span> portion covered by <span class='popup-term' data-popup-id='popup-deltoid'>deltoid</span>
-        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> <span class='popup-term' data-popup-id='popup-brachialis'>brachialis</span>
+        - Surface between the <span class='popup-term' data-popup-id='popup-anterior'>anterior</span> and <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> borders"
+        - Encompasses the deltoid tuberosity
+        - <span class='popup-term' data-popup-id='popup-proximal'>Proximal</span> portion is covered by the <span class='popup-term' data-popup-id='popup-deltoid'>deltoid</span>
+        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for the <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> <span class='popup-term' data-popup-id='popup-brachialis'>brachialis</span>
       base: anterolateral surface
       views:
         - anterior:
@@ -226,9 +234,13 @@
 
     - name: <span class='popup-term' data-popup-id='popup-posterior'>Posterior</span> Surface
       description:
-        - Surface between <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> and <span class='popup-term' data-popup-id='popup-medial'>medial</span> borders, behind the shaft
-        - Covered by <span class='popup-term' data-popup-id='popup-medial'>medial</span> head of <span class='popup-term' data-popup-id='popup-triceps_brachii'>triceps brachii</span>
-        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for <span class='popup-term' data-popup-id='popup-medial'>medial</span> and <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> heads of <span class='popup-term' data-popup-id='popup-triceps_brachii'>triceps</span>
+        - Surface between the <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> and <span class='popup-term' data-popup-id='popup-medial'>medial</span> borders
+        - Covered by the <span class='popup-term' data-popup-id='popup-medial'>medial</span> head of the <span class='popup-term' data-popup-id='popup-triceps_brachii'>triceps brachii</span>
+        - has_subpoints:
+            main_point: <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for the <span class='popup-term' data-popup-id='popup-medial'>medial</span> and <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> heads of the <span class='popup-term' data-popup-id='popup-triceps_brachii'>triceps</span>
+            subpoints:
+                - <span class='popup-term' data-popup-id='popup-medial'>Medial</span> head inserts <span class='popup-term' data-popup-id='popup-inferior'>inferior</span> to the radial groove
+                - <span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> head inserts <span class='popup-term' data-popup-id='popup-superior'>superior</span> to the radial groove
       base: posterior surface
       views:
         - posterior:
@@ -236,17 +248,18 @@
             - default
 
 - big_picture_name: Supracondylar Ridges
+  singular: false
   elements:
     - name: <span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> Supracondylar Ridge
       description:
-        - Ridge above <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> epicondyle
-        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for <span class='popup-term' data-popup-id='popup-brachioradialis'>brachioradialis</span> and <span class='popup-term' data-popup-id='popup-extensor_carpi_radialis_longus'>extensor carpi radialis longus</span>
+        - Ridge above the <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> epicondyle
+        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for the <span class='popup-term' data-popup-id='popup-brachioradialis'>brachioradialis</span> and the <span class='popup-term' data-popup-id='popup-extensor_carpi_radialis_longus'>extensor carpi radialis longus</span>
       base: lateral supracondylar ridge
       views:
         - anterior:
             - isolated
-            - extensor carpi radialis longus
             - default
+            - extensor carpi radialis longus
         - lateral:
             - isolated
             - extensor carpi radialis longus
@@ -254,8 +267,8 @@
 
     - name: <span class='popup-term' data-popup-id='popup-medial'>Medial</span> Supracondylar Ridge
       description:
-        - Ridge above <span class='popup-term' data-popup-id='popup-medial'>medial</span> epicondyle
-        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for humeral head of <span class='popup-term' data-popup-id='popup-pronator_teres'>pronator teres</span>
+        - Ridge above the <span class='popup-term' data-popup-id='popup-medial'>medial</span> epicondyle
+        - <span class='popup-term' data-popup-id='popup-origin'>Origin</span> site for the <span class='popup-term' data-popup-id='popup-pronator_teres'>pronator teres's</span> humeral head
       base: medial supracondylar ridge
       views:
         - anterior:
@@ -266,22 +279,12 @@
             - default
 
 - big_picture_name: Epicondyles
+  singular: false
   elements: 
     - name: <span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> Epicondyle
       description:
-        - Small <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> prominence on <span class='popup-term' data-popup-id='popup-distal'>distal</span> end of humerus
-        - Attachment site for radial collateral ligament
-        - Radial Collateral Ligament - ligament on lateral side of elbow running from lateral epicondyle of humerus to the annular ligament of the radius
-        - Stabilizes elbow
-        - Annular ligament of radius - ligament encircling head of the radius that connects it to the ulna
-        - Origin for forearm extensor muscles
-        - Forearm extensors - extend wrist and fingers; assist in supination
-        - Extensor carpi radialis brevis
-        - Extensor digitorium
-        - Extensor digiti minimi
-        - Extensor carpi ulnaris
-        - Anconeus
-        - Supinator
+        - Small <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> prominence on the humerus's <span class='popup-term' data-popup-id='popup-distal'>distal</span> end
+        - Attachment site for the <span class='popup-term' data-popup-id='popup-radial_collateral_ligament'>radial collateral ligament</span>
       base: lateral epicondyle
       views:
         - anterior:
@@ -295,17 +298,9 @@
             - default
     - name: <span class='popup-term' data-popup-id='popup-medial'>Medial</span> Epicondyle
       description:
-        - Larger <span class='popup-term' data-popup-id='popup-medial'>medial</span> prominence on distal end of humerus
-        - Origin for forearm flexor muscles and ulnar collateral ligament
-        - Forearm flexors - flex wrist and fingers; assist in pronation
-        - Flexor carpi ulnaris
-        - Palmaris longus
-        - Flexor carpi radialis
-        - Pronator teres
-        - Flexor digitorum superficialis
-        - Ulnar Collateral Ligament - ligament on medial side of elbow running from medial epicondyle of humerus to coronoid process and olecranon of ulna
-        - Stabilizes elbow
-        - Posterior to this is groove for ulnar nerve
+        - Larger <span class='popup-term' data-popup-id='popup-medial'>medial</span> prominence on the humerus's <span class='popup-term' data-popup-id='popup-distal'>distal</span> end
+        - Origin for <span class='popup-term' data-popup-id='popup-forearm_flexors'>forearm flexor muscles</span> and <span class='popup-term' data-popup-id='popup-ulnar_collateral_ligament'>ulnar collateral ligament</span>
+        - The <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> side contains the groove for the <span class='popup-term' data-popup-id='popup-ulnar_nerve'>ulnar nerve</span>
       base: medial epicondyle
       views:
         - anterior:
@@ -320,11 +315,12 @@
 
 
 - big_picture_name: Fossas
+  singular: false
   elements:
     - name: Radial Fossa
       description:
-        - Small <span class='popup-term' data-popup-id='popup-anterior'>anterior</span> depression <span class='popup-term' data-popup-id='popup-superior'>superior</span> to capitulum and <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> to coronoid fossa
-        - Accommodates <span class='popup-term' data-popup-id='popup-radius'>radial</span> head during elbow <span class='popup-term' data-popup-id='popup-flexion'>flexion</span>
+        - Small <span class='popup-term' data-popup-id='popup-anterior'>anterior</span> depression <span class='popup-term' data-popup-id='popup-superior'>superior</span> to the capitulum and <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> to the coronoid fossa
+        - Accommodates the <span class='popup-term' data-popup-id='popup-radius'>radial</span> head during elbow <span class='popup-term' data-popup-id='popup-flexion'>flexion</span>
       base: radial fossa
       views:
         - anterior:
@@ -336,8 +332,8 @@
 
     - name: Coronoid Fossa
       description:
-        - <span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> depression <span class='popup-term' data-popup-id='popup-superior'>superior</span> to trochlea
-        - Accommodates coronoid process of <span class='popup-term' data-popup-id='popup-ulna'>ulna</span> during deep elbow <span class='popup-term' data-popup-id='popup-flexion'>flexion</span>
+        - <span class='popup-term' data-popup-id='popup-anterior'>Anterior</span> depression <span class='popup-term' data-popup-id='popup-superior'>superior</span> to the trochlea
+        - Accommodates the <span class='popup-term' data-popup-id='popup-ulna'>ulna's</span> coronoid process during deep elbow <span class='popup-term' data-popup-id='popup-flexion'>flexion</span>
       base: coronoid fossa
       views:
         - anterior:
@@ -349,8 +345,8 @@
 
     - name: Olecranon Fossa
       description:
-        - Large <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> depression <span class='popup-term' data-popup-id='popup-superior'>superior</span> to trochlea
-        - Accommodates olecranon process of <span class='popup-term' data-popup-id='popup-ulna'>ulna</span> during elbow <span class='popup-term' data-popup-id='popup-extension'>extension</span>
+        - Large <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> depression <span class='popup-term' data-popup-id='popup-superior'>superior</span> to the trochlea
+        - Accommodates the <span class='popup-term' data-popup-id='popup-ulna'>ulna</span>'s olecranon process during elbow <span class='popup-term' data-popup-id='popup-extension'>extension</span>
       base: olecranon fossa
       views:
         - posterior:
@@ -361,11 +357,14 @@
             - default
 
 - big_picture_name: Distal Structures
+  singular: false
   elements:
     - name: Trochlea
       description:
-        - Pulley-shaped structure on <span class='popup-term' data-popup-id='popup-medial'>medial</span> <span class='popup-term' data-popup-id='popup-distal'>distal</span> humerus
-        - Articulates with trochlear notch of <span class='popup-term' data-popup-id='popup-ulna'>ulna</span> for hinge movement
+        - Pulley-shaped structure on the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span>'s <span class='popup-term' data-popup-id='popup-distal'>distal</span> end
+        - <span class='popup-term' data-popup-id='popup-articulate'>Articulates</span> with the trochlear notch of the <span class='popup-term' data-popup-id='popup-ulna'>ulna</span>
+        - Allows for <span class='popup-term' data-popup-id='popup-hinge'>hinge</span> movement
+        - <span class='popup-term' data-popup-id='popup-medial'>Medial</span> to the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span>'s capitulum
       base: trochlea
       views:
         - anterior:
@@ -377,8 +376,10 @@
 
     - name: Capitulum
       description:
-        - Rounded <span class='popup-term' data-popup-id='popup-lateral'>lateral</span> <span class='popup-term' data-popup-id='popup-distal'>distal</span> humerus
-        - Articulates with head of <span class='popup-term' data-popup-id='popup-radius'>radius</span> for forearm <span class='popup-term' data-popup-id='popup-rotation'>rotation</span> and <span class='popup-term' data-popup-id='popup-flexion'>flexion</span>
+        - Rounded structure on the humerus's <span class='popup-term' data-popup-id='popup-distal'>distal</span> end
+        - <span class='popup-term' data-popup-id='popup-articulate'>Articulates</span> with the head of the <span class='popup-term' data-popup-id='popup-radius'>radius</span>
+        - Allows for forearm <span class='popup-term' data-popup-id='popup-rotation'>rotation</span> and <span class='popup-term' data-popup-id='popup-flexion'>flexion</span>
+        - <span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> to the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span>'s trochlea
       base: capitulum
       views:
         - anterior:
@@ -390,8 +391,8 @@
 
     - name: Condyle
       description:
-        - Encapsulates trochlea and capitulum
-        - Forms elbow joint surface
+        - Name for the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span>'s trochlea and capitulum when looked at together
+        - Forms the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span>'s elbow joint surface
       base: condyle
       views:
         - anterior:
@@ -401,10 +402,11 @@
             - isolated
             - default
 
-    - name: Groove for Ulnar Nerve (Cubital Groove)
+    - name: Groove for the Ulnar Nerve
       description:
-        - <span class='popup-term' data-popup-id='popup-posterior'>Posterior</span> <span class='popup-term' data-popup-id='popup-medial'>medial</span> epicondyle groove where ulnar nerve runs
-        - “Funny bone” area
+        - Groove on the <span class='popup-term' data-popup-id='popup-posterior'>posterior</span> surface of the <span class='popup-term' data-popup-id='popup-medial'>medial</span> epicondyle that the ulnar nerve runs through
+        - “Funny bone” area because striking this area compresses the <span class='popup-term' data-popup-id='popup-ulnar_nerve'>ulnar nerve</span> and leads to the "funny bone" sensation
+        - Also called the <span class='popup-term' data-popup-id='popup-cubital'>Cubital</span> Groove
       base: cubital groove
       views:
         - anterior:

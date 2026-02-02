@@ -1,12 +1,12 @@
 - anterior:
     - isolated
     - not isolated
-- lateral:
-    - isolated
-    - not isolated
-- posterior:
-    - isolated
-    - not isolated
-- medial:
-    - isolated
-    - not isolated
+# - lateral:
+#     - isolated
+#     - not isolated
+# - posterior:
+#     - isolated
+#     - not isolated
+# - medial:
+#     - isolated
+#     - not isolated

@@ -1,5 +1,5 @@
 <div>
-  <p><strong>Goal:</strong> Understand how the humerus (the bone in your upper arm extending from the shoulder to the elbow) relates to the body as a whole.</p>
+  <p><strong>Goal:</strong> Understand how the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span> (hover for more information) relates to the body as a whole.</p>
   
   <p><strong>Purpose:</strong> To encourage deeper, longer-lasting learning by linking the bone to the skeletal, muscular, and cardiovascular systems rather than relying on rote memorization.</p>
 
@@ -34,7 +34,7 @@
             <div class="step-neighbors step-overview">
                 <p class="neighbors-color">Neighbors</p>
                 <ul>
-                    <li><span class="neighbors-color">Question:</span> What bones <span class='popup-term' data-popup-id='popup-articulate'>articulate</span> (form joints with) this bone?</li>
+                    <li><span class="neighbors-color">Question:</span> What bones <span class='popup-term' data-popup-id='popup-articulate'>articulate</span> (form joints with) this bone? What is the type of each joint?</li>
                     <li><span class="neighbors-color">Purpose:</span> Lets you examine what joints the bone is part of and what movements those joints allow.</li>
                 </ul>
             </div>
@@ -88,33 +88,48 @@
                 <button class="content-toggle-icon">
                     <span class="content-toggle-plus">+</span>
                 </button>
-                <h3><span class='popup-term' data-popup-id='popup-{{big_picture.big_picture_name | downcase}}'>{{big_picture.big_picture_name | capitalize}}</span></h3>
+                <h3 id="neighbors-{{big_picture.big_picture_name | slugify}}-header">{{big_picture.big_picture_name | capitalize}}</h3>
             </div>
 
             <!-- Content area -->
             <div class="content-area">
-                <div class="image-container hoverable-image enlarge">
-                    <!-- Isolated -->
-                    <div class="isolated active">
-                        <img
-                            src="/assets/images/bones/humerus/labeled neighbors/{{big_picture.image_name}} - isolated.png"
-                            class="isolated"
-                            onerror="this.nextElementSibling.style.display='block'"
-                            >
-                        <div class="alt-text" style="display:none;">
-                            {{big_picture.big_picture_name}} Neighbors of Humerus - Isolated
-                        </div>
+                <div>
+                    <div class="shared-image-container enlarge">
+                    <div class="hover-button-bar" style="display: none;"></div>
+                    <div class="image-container">
+                        {% for view in site.data.bones.humerus.neighbors_big_picture %}
+                            {% assign view_list = view | split: '"' %}
+                            {% assign view_name = view_list[1] %}
+                                
+                            <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                {% for hover_layer in view[view_name] %}
+                                    <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
+                                        {% assign src_url = '/assets/images/bones/humerus/labeled neighbors/' | append: {{big_picture.image_name}} | append: ' - ' | append: view_name | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                        <img
+                                            src="{{ src_url | relative_url }}"
+                                            class="{{hover_layer}}"
+                                            onerror="this.nextElementSibling.style.display='block'"
+                                            >
+                                        <div class="alt-text {{hover_layer}}" style="display:none;">
+                                            {{big_picture.big_picture_name}} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
                     </div>
-                    <!-- With Other Bones -->
-                    <div class="not_isolated">
-                        <img
-                            src="/assets/images/bones/humerus/labeled neighbors/{{big_picture.image_name}} - not isolated.png"
-                            class="not_isolated"
-                            onerror="this.nextElementSibling.style.display='block'"
-                            >
-                        <div class="alt-text" style="display:none;">
-                            {{big_picture.big_picture_name}} Neighbors of Humerus - Not Isolated
-                        </div>
+
+                    <!-- View Buttons -->
+                    <div class="view-buttons">
+                    {% for view in site.data.bones.humerus.neighbors_big_picture %}
+                        {% assign view_list = view | split: '"' %}
+                        {% assign view_name = view_list[1] %}
+                        <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                            {{ view_name | capitalize }}
+                            <!-- View -->
+                        </button>
+                    {% endfor %}
+                    </div>
                     </div>
                 </div>
                 <div class="content-text">
@@ -193,7 +208,7 @@
 
   <div class="step step-landmarks">
     <h2>Step 4 – Anatomical Landmarks</h2>
-    <p>The humerus has many named landmarks. Most are sites of muscle attachment. Some are grooves that tendons, nerves, and blood vessels pass along. Others are indentations (fossas) that accomodate parts of neighboring bones during movement.</p>
+    <p>Most of the named landmarks on the humerus are sites of muscle attachment. Some are grooves that guide tendons, nerves, and blood vessels. Others are indentations (<span class='popup-term' data-popup-id='popup-fossas'>fossas</span>) that accomodate parts of neighboring bones during movement.</p>
     {% for big_picture in site.data.bones.humerus.landmarks %}
     <div class="content-toggle-box" id="landmarks-{{big_picture.big_picture_name | slugify}}">
         <div class="content-toggle-header">
@@ -248,7 +263,150 @@
                 </div>
                 <div class="content-text">
                     <div>
-                        The {{big_picture.big_picture_name | downcase}} of the humerus encompasses the following landmarks:
+                        The {{big_picture.big_picture_name | downcase}} of the humerus encompass{% if big_picture.singular %}es{% endif %} the following landmarks:
+                        <ul>
+                        {% for child in big_picture.elements %}
+                            <li><a href="#" class="child-jump" data-child="landmark-{{child.name | slugify}}">{{child.name}}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="tutorial" style="font-size: 1em;">Click the bulleted names for more information.</p>
+                        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-toggle-content">
+            {% for child in big_picture.elements %}
+                <div class="content-toggle-child" id="landmark-{{child.name | slugify}}">
+                    <div class="content-toggle-child-text">
+                        <!-- Make flexbox to put tutorial at the bottom of the box -->
+                        <div>
+                            <h4>{{ child.name }}</h4>
+                            <ul>
+                            {% for desc in child.description %}
+                                <li>
+                                {% if desc.has_subpoints %}
+                                    {{ desc.has_subpoints.main_point }}
+                                    <ul>
+                                    {% for sub in desc.has_subpoints.subpoints %}
+                                        <li>{{ sub }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    {{ desc }}
+                                {% endif %}
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
+                    </div>
+                    <div class="shared-image-container enlarge">
+                        <div class="hover-button-bar"></div>
+                        <div class="image-container">
+                            {% for view in child.views %}
+                                {% assign view_list = view | split: '"' %}
+                                {% assign view_name = view_list[1] %}
+
+                                {% assign base_file = child.base | append: " - " | append: view_name %}
+                                    
+                                <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                    {% for hover_layer in view[view_name] %}
+                                        <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
+                                            {% assign src_url = '/assets/images/bones/humerus/labeled landmarks/' | append: base_file | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                            <img
+                                                src="{{ src_url | relative_url }}"
+                                                class="{{hover_layer}}"
+                                                onerror="this.nextElementSibling.style.display='block'"
+                                                >
+                                            <div class="alt-text {{hover_layer}}" style="display:none;">
+                                                {{ child.name }} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <!-- View Buttons -->
+                        <div class="view-buttons">
+                        {% for view in child.views %}
+                            {% assign view_list = view | split: '"' %}
+                            {% assign view_name = view_list[1] %}
+                            <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                {{ view_name | capitalize }}
+                                <!-- View -->
+                            </button>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="step step-blood">
+    <h2>Step 5 – Blood Supply</h2>
+    <p>UNFINISHED: Give an overview of the entire structure of blood vessels in the humerus. Then lead into breaking them up into proximal, shaft, and distal</p>
+    {% for big_picture in site.data.bones.humerus.blood %}
+    <div class="content-toggle-box" id="blood-{{big_picture.big_picture_name | slugify}}">
+        <div class="content-toggle-header">
+            <!-- Header line with icon -->
+            <div class="content-toggle-header-line">
+                <button class="content-toggle-icon">
+                    <span class="content-toggle-plus">+</span>
+                </button>
+                <h3 id="blood-{{big_picture.big_picture_name | slugify}}-header">{{big_picture.big_picture_name}}</h3>
+            </div>
+
+            <!-- Content area -->
+            <div class="content-area">
+                <div>
+                    <div class="shared-image-container enlarge">
+                    <div class="hover-button-bar" style="display: none;"></div>
+                    <div class="image-container">
+                        {% for view in site.data.four_views %}
+                            {% assign view_list = view | split: '"' %}
+                            {% assign view_name = view_list[1] %}
+                                
+                            <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                                {% for hover_layer in view[view_name] %}
+                                    <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
+                                        {% assign src_url = '/assets/images/bones/humerus/labeled landmark headers/' | append: {{big_picture.big_picture_name | downcase}} | append: ' - ' | append: view_name | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
+                                        <img
+                                            src="{{ src_url | relative_url }}"
+                                            class="{{hover_layer}}"
+                                            onerror="this.nextElementSibling.style.display='block'"
+                                            >
+                                        <div class="alt-text {{hover_layer}}" style="display:none;">
+                                            {{big_picture.big_picture_name}} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- View Buttons -->
+                    <div class="view-buttons">
+                    {% for view in site.data.four_views %}
+                        {% assign view_list = view | split: '"' %}
+                        {% assign view_name = view_list[1] %}
+                        <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
+                            {{ view_name | capitalize }}
+                            <!-- View -->
+                        </button>
+                    {% endfor %}
+                    </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <div>
+                        The {{big_picture.big_picture_name | downcase}} of the humerus is supplied by the following arteries:
                         <ul>
                         {% for child in big_picture.elements %}
                             <li><a href="#" class="child-jump" data-child="landmark-{{child.name | slugify}}">{{child.name}}</a></li>
@@ -334,115 +492,56 @@
         </div>
     </div>
     {% endfor %}
-    <!-- {% for group in site.data.bones.humerus.landmarks %}
-    <h3>{{ group.title }}</h3>
-    <div class="landmark-gallery">
-        {% for landmark in group.landmarks %}
-        <div class="landmark-box">
-            <div class="landmark-content">
-            <p class="landmarks-item">{{ landmark.name }}</p>
-            <ul>
-                {% for desc in landmark.description %}
-                    <li>
-                    {% if desc.text %}
-                        {{ desc.text }}
-                        {% if desc.subpoints %}
-                            <ul>
-                            {% for sub in desc.subpoints %}
-                                <li>{{ sub }}</li>
-                            {% endfor %}
-                            </ul>
-                        {% endif %}
-                    {% else %}
-                        {{ desc }}
-                    {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-            </div>
-
-            <div class="shared-landmark-container enlarge">
-            <div class="landmark-hover-button-bar"></div>
-            <div class="landmark-image-container">
-            {% for view in landmark.views %}
-
-                {% assign view_list = view | split: '"' %}
-                {% assign view_name = view_list[1] %}
-
-                {% assign base_file = landmark.base | append: " - " | append: view_name %}
-                    
-                <div class="hoverable-image-container {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
-                    {% for hover_layer in view[view_name] %}
-                        <div class="{{hover_layer}} {% if forloop.first %}active{% endif %}">
-                            {% assign src_url = '/assets/images/bones/humerus/labeled landmarks/' | append: base_file | append: ' - ' | append: {{hover_layer}} | append: '.png' %}
-                            
-                            <img
-                                src="{{ src_url | relative_url }}"
-                                class="{{hover_layer}}"
-                                onerror="this.nextElementSibling.style.display='block'"
-                                >
-                            <div class="alt-text {{hover_layer}}" style="display:none;">
-                                {{ landmark.name }} - {{ view_name | capitalize }} - {{ hover_layer | capitalize }}
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-            </div> -->
-
-            <!-- View Buttons -->
-            <!-- <div class="view-buttons">
-            {% for view in landmark.views %}
-                {% assign view_list = view | split: '"' %}
-                {% assign view_name = view_list[1] %}
-                <button class="view-btn {% if forloop.first %}active{% endif %} to-sync" data-view="{{ view_name }}">
-                    {{ view_name | capitalize }} View
-                </button>
-            {% endfor %}
-            </div>
-            </div>
-        </div>
-        {% endfor %}
-        </div>
-        <p class="tutorial">Click image to show/hide labels. <span class="desktop-only">Right click to enlarge.</span></p>
-    {% endfor %} -->
-
-  </div>
-
-  <div class="step step-blood">
-    <h2>Step 5 – Blood Supply</h2>
-    <h3>Anterior Circumflex Humeral Artery</h3>
-    <ul>
-        <li>Supplies deltoid, teres minor, teres major, coracobrachialis, shoulder joint, head of humerus
-        <ul>
-            <li>Deltoid: arm flexion/extension, medial/lateral rotation, abduction</li>
-            <li>Teres minor: lateral rotation and adduction of arm</li>
-            <li>Teres major: adducts, medially rotates arm; extends flexed arm</li>
-            <li>Coracobrachialis: flexes and adducts arm at shoulder</li>
-        </ul>
-
-        subtext:
-            - <span class='popup-term' data-popup-id='popup-medial'>Medial</span> head: <span class='popup-term' data-popup-id='popup-inferior'>inferior</span> to radial groove
-            - <span class='popup-term' data-popup-id='popup-lateral'>Lateral</span> head: <span class='popup-term' data-popup-id='popup-superior'>superior</span> to radial groove
-        </li>
-    </ul>
-
-    <h3>Posterior Circumflex Humeral Artery</h3>
-    <ul>
-        <li>Supplies deltoid, teres minor, teres major, long/lateral heads of triceps brachii, shoulder joint, surrounding tissues
-        <ul>
-            <li>Deltoid: arm flexion/extension, medial/lateral rotation, abduction</li>
-            <li>Teres minor: lateral rotation and adduction of arm</li>
-            <li>Teres major: adducts, medially rotates arm; extends flexed arm</li>
-            <li>Triceps brachii: extends forearm at elbow</li>
-        </ul>
-        </li>
-    </ul>
     
   </div>
 
-  <p>Images from <a href="https://www.z-anatomy.com/" target="_blank">Z-Anatomy</a>.</p>
-  <p>Associated video</p>
+  <div>
+    <h2>References</h2>
+    <!-- Sections -->
+    <h3 id="reference-humerus-overview">Landmarks and General Anatomy</h3>
+    <ul>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/the-humerus">Kenhub – Humerus Anatomy</a></li>
+        <li><a href="https://courses.lumenlearning.com/suny-ap1/chapter/bones-of-the-upper-limb/">Lumen Learning – Bones of the Upper Limb</a></li>
+    </ul>
 
-  <p>Sources</p>
+
+    <h3 id="reference-muscles">Muscles</h3>
+    <ul>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/supraspinatus-muscle">Kenhub – Supraspinatus Muscle</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/brachialis-muscle">Kenhub – Brachialis Muscle</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/upper-limb-muscles-and-movements">Kenhub – Upper Limb Muscles and Movements</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/arm-muscles">Kenhub – Arm Muscles</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/latissimus-dorsi-muscle">Kenhub – Latissimus Dorsi Muscle</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/extensor-carpi-radialis-longus-muscle">Kenhub – Extensor Carpi Radialis Longus</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/pronator-teres-muscle">Kenhub – Pronator Teres Muscle</a></li>
+    </ul>
+
+
+    <h3 id="reference-joints-and-ligaments">Joints and Ligaments</h3>
+    <ul>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/elbow-joint">Kenhub – Elbow Joint</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/ligaments-of-the-upper-limb">Kenhub – Ligaments of the Upper Limb</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/head-of-radius">Kenhub – Head of Radius</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/proximal-radioulnar-joint">Kenhub – Proximal Radioulnar Joint</a></li>
+        <li><a href="https://anatomy.co.uk/humeroulnar-joint">Anatomy.co.uk – Humeroulnar Joint</a></li>
+        <li><a href="https://anatomy.co.uk/humeroradial-joint">Anatomy.co.uk – Humeroradial Joint</a></li>
+    </ul>
+
+
+    <h3 id="reference-nerves">Nerves</h3>
+    <ul>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/axillary-nerve">Kenhub – Axillary Nerve</a></li>
+    </ul>
+
+
+    <h3 id="reference-arteris">Arteries</h3>
+    <ul>
+        <li><a href="https://teachmeanatomy.info/encyclopaedia/a/anterior-circumflex-humeral-artery/">Teach Me Anatomy – Anterior Circumflex Humeral Artery</a></li>
+        <li><a href="https://www.kenhub.com/en/library/anatomy/posterior-circumflex-humeral-artery">Kenhub – Posterior Circumflex Humeral Artery</a></li>
+    </ul>
+
+    <h3 id="Images">Images</h3>
+    <p>All images taken from <a href="https://www.z-anatomy.com/" target="_blank">Z-Anatomy</a>. As of the date this was written (February 2, 2026), Z-Anatomy has a CC-BY-SA 4.0 License.</p>
+
+  </div>
 </div>

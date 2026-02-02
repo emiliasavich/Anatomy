@@ -1,0 +1,86 @@
+- big_picture_name: Proximal Region
+  singular: true
+  elements:
+    - name: Anterior Circumflex Humeral Artery
+      description:
+        - Do more research
+        - Supplies deltoid, teres minor, teres major, coracobrachialis, shoulder joint, head of humerus
+      base: anterior circumflex humeral artery
+      views:
+        - anterior:
+            - isolated
+            - full
+
+    - name: Posterior Circumflex Humeral Artery
+      description:
+        - Do more research
+        - Supplies deltoid, teres minor, teres major, long/lateral heads of triceps brachii, shoulder joint, surrounding tissues
+      base: posterior circumflex humeral artery
+      views:
+        - posterior:
+            - isolated
+            - full
+
+- big_picture_name: Shaft
+  singular: true
+  elements:
+    - name: Nutrient Artery of the Humerus
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full
+    - name: Brachial Artery Branches
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full
+    - name: Profunda Brachii Branches
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full
+
+- big_picture_name: Distal Region
+  singular: true
+  elements:
+    - name: Radial Collateral Artery
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full
+    - name: Middle Collateral Artery
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full
+    - name: Superior Ulnar Collateral Artery
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full
+    - name: Inferior Ulnar Collateral Artery
+      description:
+        - Do more research
+      base: nutrient artery
+      views:
+        - anterior:
+            - isolated
+            - full

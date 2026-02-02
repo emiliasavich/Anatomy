@@ -55,7 +55,8 @@ function openEnlargedClone(originalContainer) {
     flexDirection: "column",
     justifyContent: "center", 
     padding: "10px",
-    cursor: "default" // Don't close when clicking inside the white box
+    cursor: "default", // Don't close when clicking inside the white box
+    marginBottom: "auto",
   });
 
   // 3. FIX: Force the internal image container to fill the space
@@ -67,7 +68,7 @@ function openEnlargedClone(originalContainer) {
       width: "85vw",
       height: "85vh",
       position: "relative",
-      display: "block"
+      display: "block",
     });
   }
 

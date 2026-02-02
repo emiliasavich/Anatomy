@@ -15,6 +15,16 @@ anatomical_position:
     </div>
   url:
 
+annular_ligament_of_the_radius:
+  text:
+    <h1>UNFINISHED - annular_ligament_of_the_radius</h1>
+    <div>
+      <p>Annular ligament of radius - ligament encircling head of the radius that connects it to the ulna
+        - Origin for <span class='popup-term' data-popup-id='popup-forearm_extensors'>forearm extensor muscles</span></p>
+      <p class='popup_example'></p>
+    </div>
+  url:
+
 anterior: 
   text: |
     <div>
@@ -80,7 +90,6 @@ brachioradialis:
     <div>Brachioradialis: <span class='popup-term' data-popup-id='popup-flexion'>flexes</span> forearm</div>
   url: 
 
-
 cervical:
   text: |
     <div>
@@ -118,6 +127,11 @@ circumduction:
     </div>
   url: 
 
+cubital: 
+  text: |
+    <h1>UNFINISHED - cubital</h1>
+  url: 
+
 deep_brachial_artery: 
   text: |
     <h1>UNFINISHED - deep_brachial_artery</h1>
@@ -131,10 +145,10 @@ deltoid:
 
 distal:
   text: |
-    <h1>UNFINISHED - distal</h1>
     <div>
-      <p>Distal means farther from a body part's <span class="popup-term" data-popup-id="popup-origin">origin</span>.</p>
-      <p class="popup_example">Ex: Your finger is distal to your forearm because your finger is farther from the shoulder, the arm's <span class="popup-term" data-popup-id="popup-origin">origin.</span></p>
+      <p><strong>Distal</strong> means farther from a reference point. The trunk of the body is assumed to be the reference point if none is given.</p>
+      <p>Distal is the opposite of <span class='popup-term' data-popup-id='popup-proximal'>proximal</span>.</p>
+      <p class='popup_example'>Ex: The <span class='popup-term' data-popup-id='popup-radius'>radius</span> is distal to the <span class='popup-term' data-popup-id='popup-humerus'>humerus</span>.</p>
     </div>
   url:
 
@@ -160,6 +174,35 @@ flexion:
     </div>
   url: 
 
+forearm_extensors:
+  text:
+    <h1>UNFINISHED - forearm extensors</h1>
+    <div>
+      <p>Forearm extensors - extend wrist and fingers; assist in supination
+        - Extensor carpi radialis brevis
+        - Extensor digitorium
+        - Extensor digiti minimi
+        - Extensor carpi ulnaris
+        - Anconeus
+        - Supinator</p>
+      <p class='popup_example'></p>
+    </div>
+  url:
+
+forearm_flexors:
+  text:
+    <h1>UNFINISHED - forearm flexors</h1>
+    <div>
+      <p>Forearm flexors - flex wrist and fingers; assist in pronation
+        - Flexor carpi ulnaris
+        - Palmaris longus
+        - Flexor carpi radialis
+        - Pronator teres
+        - Flexor digitorum superficialis</p>
+      <p class='popup_example'></p>
+    </div>
+  url:
+
 hinge: 
   text: |
     <div>
@@ -171,7 +214,7 @@ hinge:
 humerus: 
   text: |
     <div>
-      <p>The <strong>humerus</strong> is the long bone in the upper arm.</p>
+      <p>The <strong>humerus</strong> is the long bone in the upper arm. It extends from the shoulder to the elbow.</p>
     </div>
   url: /upper_limb/bones/humerus.html
 
@@ -294,8 +337,22 @@ pronator_teres:
 
 proximal: 
   text: |
-    <h1>UNFINISHED - proximal</h1>
+    <div>
+      <p><strong>Proximal</strong> means closer to a reference point. The trunk of the body is assumed to be the reference point if none is given.</p>
+      <p>Proximal is the opposite of <span class='popup-term' data-popup-id='popup-distal'>distal</span>.</p>
+      <p class='popup_example'>Ex: The <span class='popup-term' data-popup-id='popup-humerus'>humerus</span> is proximal to the <span class='popup-term' data-popup-id='popup-radius'>radius</span>.</p>
+    </div>
   url: 
+
+radial_collateral_ligament:
+  text:
+    <h1>UNFINISHED - radial collateral ligament</h1>
+    <div>
+      <p>Radial Collateral Ligament - ligament on lateral side of elbow running from lateral epicondyle of humerus to the <span class='popup-term' data-popup-id='popup-annular_ligament_of_the_radius'>annular ligament of the radius</span>
+        - Stabilizes elbow</p>
+      <p class='popup_example'></p>
+    </div>
+  url:
 
 radial_nerve: 
   text: |
@@ -414,6 +471,21 @@ ulna:
       <p>The <strong>ulna</strong> is the <span class='popup-term' data-popup-id='popup-medial'>medial</span> bone of the forearm in <span class='popup-term' data-popup-id='popup-anatomical_position'>anatomical position</span>. It lies on the same side of the forearm as the pinky does.</p>
     </div>
   url: 
+
+ulnar_collateral_ligament:
+  text:
+    <h1>UNFINISHED - ulnar collateral ligament</h1>
+    <div>
+      <p>Ulnar Collateral Ligament - ligament on <span class='popup-term' data-popup-id='popup-medial'>medial</span> side of elbow running from <span class='popup-term' data-popup-id='popup-medial'>medial</span> epicondyle of <span class='popup-term' data-popup-id='popup-humerus'>humerus</span> to coronoid process and olecranon of <span class='popup-term' data-popup-id='popup-ulna'>ulna</span>
+        - Stabilizes elbow</p>
+      <p class='popup_example'></p>
+    </div>
+  url:
+
+ulnar_nerve:
+  text:
+    <h1>UNFINISHED - ulnar nerve</h1>
+  url:
 
 vertebrae: 
   text: |

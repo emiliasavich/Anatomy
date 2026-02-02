@@ -49,17 +49,21 @@ layout: default
 <script src="{{ '/assets/js/stop-click-on-highlight.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/toc-stuff.js' | relative_url }}"></script>
 <div id="main" role="main">
-  <div class="sidebar sticky">
-    <div class="sidebar-tabs">
-      <button id="show-menu" class="tab active">Menu</button>
-      <button id="show-toc" class="tab">Table of Contents</button>
-    </div>
+  {% if page.layout != "directory" %}
+    <div class="sidebar sticky">
+      <div class="sidebar-tabs">
+        <button id="show-menu" class="tab active">Menu</button>
+        <button id="show-toc" class="tab">Table of Contents</button>
+      </div>
 
-    <div id="sidebar-content" style="margin: 0;">
-      {% include sidebar.html %}
+      <div id="sidebar-content" style="margin: 0;">
+        {% include sidebar.html %}
+      </div>
+      <!-- <div id="toc" class="sidebar-sticky"></div> -->
     </div>
-    <!-- <div id="toc" class="sidebar-sticky"></div> -->
-  </div>
+  {% else %}
+    {% include sidebar.html %}
+  {% endif %}
 
 
 
