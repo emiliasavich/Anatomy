@@ -6,8 +6,10 @@ permalink: /about/
 
 <div>
 
+  <p><strong>At CommuniQuest, we're on a quest to communicate complex concepts effectively.</strong></p>
+
   <p>
-    <strong>Comprehensive note sheets that help you see the big picture.</strong>
+    Our anatomy study sheets are comprehensive note sheets that help you see the big picture.
   </p>
 
   <p>
