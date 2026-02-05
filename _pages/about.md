@@ -9,11 +9,7 @@ permalink: /about/
   <p><strong>At CommuniQuest, we are on a quest to communicate complex concepts effectively.</strong></p>
 
   <p>
-    Our anatomy study sheets are comprehensive note sheets that help you see the big picture.
-  </p>
-
-  <p>
-    Each study sheet on this site is designed to promote understanding rather than rote memorization.
+    Our anatomy study sheets are comprehensive note sheets that help you see the big picture. Each study sheet on this site is designed to promote understanding rather than rote memorization.
     The goal is to focus on the <em>why</em> behind anatomical structures, not just the <em>what</em>, to make
     knowledge more meaningful and easier to retain.
   </p>
