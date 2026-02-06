@@ -1,4 +1,4 @@
-# Anatomy
-Repository of anatomy information sheets associated with [AnatomyQuest](https://www.youtube.com/@AnatomyQuesting) YouTube channel.
+# AnatomyQuest
+Repository of anatomy information pages created in collaboration with underprivileged communities. Revenue raised by the site will be used to directly support those communities.
 
 Licenced under CC-BY-SA-4.0.
