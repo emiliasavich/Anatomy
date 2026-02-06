@@ -19,12 +19,13 @@
 # in the templates via {{ site.myvariable }}.
 
 locale: "en-US"
-title: Anatomy Study Sheets
+logo: "/assets/images/WebsiteAvatar.png"
+title: AnatomyQuest
 subtitle: ""
 email: emiliasavich@gmail.com
 name: "Emilia Savich"
 description: >- # this means to ignore newlines until "baseurl:"
-  Anatomy study sheets created in conjunction with AnatomyQuest YouTube videos.
+  An anatomy site that makes learning interactive.
 url: "https://anatomyquest.org/" # the base hostname & protocol for your site, e.g. http://example.com
 repository: "emiliasavich/Anatomy"
 # twitter_username: jekyllrb
@@ -32,11 +33,11 @@ repository: "emiliasavich/Anatomy"
 
 
 # author info
-author:
-  name: AnatomyQuest
-  avatar: "/assets/images/WebsiteAvatar.png"
-  bio: >-
-    Refining the art of impactful speech.
+# author:
+#   name: AnatomyQuest
+#   avatar: "/assets/images/WebsiteAvatar.png"
+#   bio: >-
+#     Refining the art of impactful speech.
 
 # Build settings
 theme: minimal-mistakes-jekyll
@@ -53,11 +54,11 @@ collections:
 breadcrumbs: true
 
 # Footer
-footer:
-  links:
-    - label: "YouTube"
-      icon: "fab fa-youtube"
-      url: "https://youtube.com/@anatomyquesting"
+# footer:
+#   links:
+#     - label: "YouTube"
+#       icon: "fab fa-youtube"
+#       url: "https://youtube.com/@anatomyquesting"
 copyright: "CC BY-SA 4.0 – AnatomyQuest"
 copyright_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 
