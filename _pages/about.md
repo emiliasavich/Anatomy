@@ -6,7 +6,7 @@ permalink: /about/
 
 <div>
 
-  <p><strong>At CommuniQuest, we are on a quest to communicate complex concepts effectively.</strong></p>
+  <p><strong>At AnatomyQuest we are on a quest to communicate complex concepts effectively.</strong></p>
 
   <p>
     Our anatomy study sheets are comprehensive note sheets that help you see the big picture. Each study sheet on this site is designed to promote understanding rather than rote memorization.
@@ -24,7 +24,7 @@ permalink: /about/
   <h2>About the Creator</h2>
 
   <p>
-    CommuniQuest is created by a learner with an interest in understanding how
+    AnatomyQuest is created by a learner with an interest in understanding how
     complex material can be clearly and effectively explained.
   </p>
 
